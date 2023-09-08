@@ -1,0 +1,81 @@
+.tabSet {
+  margin: 20px auto;
+  .tabItems {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto 1.5em auto;
+    gap: 10px;
+    button {
+      letter-spacing: 0.6px;
+      padding: 0.5em 1.5em;
+      text-align: center;
+      border: none;
+      margin: 1px;
+      border-radius: 0;
+      box-shadow: none;
+      background: transparent;
+      border-radius: 2em;
+      cursor: pointer;
+      @include screen('mobile') {
+        background-color: #f1f1f1;
+      }
+      &:hover {
+        background: #cdd;
+      }
+      &:focus-visible {
+        outline: none;
+        box-shadow: 0 0px 0px 2px $aFocus inset;
+        @include screen('mobile') {
+          box-shadow: none;
+        }
+      }
+      &.active {
+        cursor: default;
+        background: $colorPrimary;
+        color: #fff;
+      }
+    }
+  }
+
+  .tabContent {
+    display: none;
+    position: relative;
+    &.active {
+      display: block;
+    }
+    a:focus-visible {
+      outline: none;
+      box-shadow: 0 0px 0px 2px $aFocus inset;
+      @include screen('mobile') {
+        box-shadow: none;
+      }
+    }
+  }
+
+  &.onMobile {
+    .tabContent {
+      display: block;
+      box-shadow: none;
+      padding: 0;
+      .tabBtn {
+        width: 100%;
+        margin: 0 0 5px 0;
+        &.active {
+          background: $colorPrimary;
+          color: #fff;
+          border-color: $colorPrimary;
+        }
+      }
+      a:focus {
+        outline: none;
+        box-shadow: 0 0px 0px 2px #1aadfa inset;
+      }
+    }
+    .content {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+  }
+}

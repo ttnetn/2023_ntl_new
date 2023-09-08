@@ -1,0 +1,47 @@
+.megaMenu {
+  &.sticky {
+    & > ul {
+      & > li.active {
+        & > ul {
+          width: calc(100% - 30px);
+          left: 15px;
+        }
+      }
+    }
+  }
+  & > ul {
+    position: relative;
+    & > li.active {
+      position: initial;
+      & > ul {
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        gap: 10px;
+
+        & > li {
+          flex-basis: calc((100% - 40px) / 5);
+        }
+        ul {
+          display: block;
+          position: relative;
+          left: 0;
+          opacity: 1;
+          background: none;
+          padding-left: 20px;
+        }
+      }
+    }
+    ul {
+      li.hasChild {
+        a {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
