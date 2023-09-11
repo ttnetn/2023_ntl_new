@@ -415,7 +415,10 @@
       color: #fff;
       font-weight: 500;
       letter-spacing: 0.5px;
-      @include screen('mobile') {
+      transition: 0.3s;
+      transform: perspective(1px) translateZ(0);
+      &:hover {
+        transform: scale(1.2);
       }
     }
     &.fb {
