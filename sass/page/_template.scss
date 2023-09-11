@@ -54,6 +54,19 @@ body {
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerPage ClassName
 .innerPage {
+  position: relative;
+  background: linear-gradient(180deg, rgba(243, 241, 132, 0.8) 0%, rgba(234, 242, 132, 0.5) 15%, rgba(227, 243, 132, 0) 28%);
+  margin-top: 106px;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% - 2px);
+    left: 0;
+    width: 100%;
+    height: 106px;
+    background: url(../images/booktop01.svg) no-repeat center bottom;
+    background-size: 100%;
+  }
   & > .container {
     padding-top: 1em;
     @include gutter(); //gutter 代表左右要留白

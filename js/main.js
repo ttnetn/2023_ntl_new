@@ -361,7 +361,7 @@ function topNav() {
 function searchTypeB() {
   const siteHeader = document.querySelector('.header .container');
   const searchBtnOut = document.querySelector('.wrapper .submenuBox') || null;
-  const webSearch = document.querySelector('.wrapper .webSearch') || null;
+  const webSearch = document.querySelector('.wrapper .webSearch.typeB') || null;
   const searchBtn = document.querySelector('.wrapper .webSearchBtn button') || null;
   const menuOverlay = document.querySelector('.menuOverlay');
   const body = document.querySelector('body');
@@ -1898,20 +1898,22 @@ langFunction({
   },
 });
 
-function moveNavBar() {
-  const windowWidth = window.innerWidth;
-  const navBar = document.querySelector('.navBar');
-  const news = document.querySelector('.news');
+var navBarElement = document.querySelector('.navBar');
+if (navBarElement) {
+  function moveNavBar() {
+    const windowWidth = window.innerWidth;
+    const navBar = document.querySelector('.navBar');
+    const news = document.querySelector('.news');
 
-  if (windowWidth <= 991) {
-    // 當窗口寬度小於等於767px時，將A移到B的後面
-    news.parentNode.insertBefore(navBar, news.nextSibling);
-  } else {
-    // 當窗口寬度大於767px時，將A移到B的前面
-    news.parentNode.insertBefore(navBar, news);
+    if (windowWidth <= 991) {
+      // 當窗口寬度小於等於767px時，將A移到B的後面
+      news.parentNode.insertBefore(navBar, news.nextSibling);
+    } else {
+      // 當窗口寬度大於767px時，將A移到B的前面
+      news.parentNode.insertBefore(navBar, news);
+    }
   }
 }
-
 // 在頁面加載和窗口大小改變時調用moveNavBar函數
 window.addEventListener('load', moveNavBar);
 window.addEventListener('resize', moveNavBar);
