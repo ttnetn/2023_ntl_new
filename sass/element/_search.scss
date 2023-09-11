@@ -176,8 +176,8 @@
       border: none;
       border-radius: 2em;
       &:hover,
-      &:focus-visible {
-        box-shadow: none;
+      &:focus {
+        background-color: darken($colorSecondary, 10);
       }
     }
   }

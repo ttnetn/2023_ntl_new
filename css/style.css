@@ -2,6 +2,7 @@
 @import '../vendor/swiper/swiper-bundle.min.css';
 @import '../vendor/fancybox/fancybox.css';
 @import '../vendor/pg_calendar/css/pignose.calendar.css';
+@import '../css/animate.css';
 .breadcrumb ul li + li:before {
   content: " / ";
   display: inline-block;
@@ -1924,7 +1925,7 @@
     }
   }
   a:focus-visible {
-    outline: #1c8e93 2px solid;
+    outline: #d30000 2px solid;
   }
   @media screen and (max-width: 767px) {
     a:focus-visible {
@@ -2124,7 +2125,7 @@
     cursor: pointer;
   }
   a:focus-visible {
-    outline: #02676c 2px solid;
+    outline: #d30000 2px dashed;
   }
   kbd {
     background: #fff;
@@ -2203,7 +2204,6 @@
   .fontSize ul li a.active {
     background: #038187;
     color: #fff;
-    box-shadow: none;
   }
   .fontSize ul li button.small,
   .fontSize ul li a.small {
@@ -2280,6 +2280,7 @@
     position: relative;
     font-weight: 400;
     align-items: center;
+    margin-right: 2px;
   }
   .slidedown button, .slidedown > a {
     text-align: left;
@@ -2511,12 +2512,12 @@
     border: none;
     border-radius: 2em;
   }
-  .webSearch .btnGrp button:hover, .webSearch .btnGrp button:focus-visible,
+  .webSearch .btnGrp button:hover, .webSearch .btnGrp button:focus,
   .webSearch .btnGrp .btn:hover,
-  .webSearch .btnGrp .btn:focus-visible,
+  .webSearch .btnGrp .btn:focus,
   .webSearch .btnGrp .btnSearch:hover,
-  .webSearch .btnGrp .btnSearch:focus-visible {
-    box-shadow: none;
+  .webSearch .btnGrp .btnSearch:focus {
+    background-color: #d8ee56;
   }
   .webSearch .keywordHot {
     flex: 1 1 100%;
@@ -2549,7 +2550,7 @@
     cursor: pointer;
   }
   .webSearch .keywordHot ul a:focus-visible {
-    outline: #02676c 2px solid;
+    outline: #d30000 2px dashed;
   }
   .webSearchBg {
     position: fixed;
@@ -3031,7 +3032,7 @@
     cursor: pointer;
   }
   .breadcrumb a:focus-visible {
-    outline: #02676c 2px solid;
+    outline: #d30000 2px dashed;
   }
   .divider,
   .dividerVertical {
@@ -3765,7 +3766,7 @@
     cursor: pointer;
   }
   .tag ul li a:focus-visible {
-    outline: #02676c 2px solid;
+    outline: #d30000 2px dashed;
   }
   .scrollToTop {
     width: 50px;
@@ -3807,7 +3808,7 @@
     cursor: pointer;
   }
   em[tooltip]:focus-visible {
-    outline: #02676c 2px solid;
+    outline: #d30000 2px dashed;
   }
   [tooltip]:before,
   [tooltip]:after {
@@ -4155,7 +4156,7 @@
     cursor: pointer;
   }
   .header .navigation .navList li a:focus-visible {
-    outline: #02676c 2px solid;
+    outline: #d30000 2px dashed;
   }
   .header .navigation .submenuBox {
     display: flex;
@@ -4253,9 +4254,6 @@
     color: #333;
     box-sizing: border-box;
   }
-  .mainMenu > ul > li > a:focus-visible {
-    box-shadow: 0 0 0 2px inset #02676c;
-  }
   .mainMenu > ul > li.hasChild > a:after {
     content: "";
     width: 4px;
@@ -4282,7 +4280,6 @@
   }
   .mainMenu ul li a {
     display: block;
-    outline: none;
     text-decoration: none;
     font-size: 1.125em;
   }
@@ -4661,7 +4658,7 @@
     cursor: pointer;
   }
   .fatFooter nav ul li a:focus-visible {
-    outline: #02676c 2px solid;
+    outline: #d30000 2px dashed;
   }
   .fatFooter nav ul li a:hover {
     box-shadow: none;
@@ -5846,7 +5843,7 @@
   input[type=password]:focus-visible,
   textarea:focus-visible,
   select:focus-visible {
-    box-shadow: 0px 0px 0px 2px #04b1b9;
+    box-shadow: 0px 0px 0px 2px #fd2323;
     outline: none;
   }
   button:focus,
@@ -5891,8 +5888,8 @@
   input[type=checkbox]:focus,
   input[type=radio]:checked,
   input[type=radio]:focus {
-    border-color: #038187;
-    background-color: #038187;
+    border-color: #eb0202;
+    background-color: #eb0202;
     outline: none;
   }
   input[type=checkbox]:checked {
@@ -5900,18 +5897,18 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 98%;
-    box-shadow: #038187 0 0 0 2px;
+    box-shadow: #eb0202 0 0 0 2px;
     border-radius: 2px;
   }
   input[type=radio]:focus {
-    border-color: #038187;
-    background-color: #038187;
-    box-shadow: #fff 0 0 0 3px inset, #038187 0 0 0 2px;
+    border-color: #eb0202;
+    background-color: #eb0202;
+    box-shadow: #fff 0 0 0 3px inset, #eb0202 0 0 0 2px;
   }
   input[type=checkbox]:focus {
-    border-color: #038187;
-    background-color: #038187;
-    box-shadow: #038187 0 0 0 2px;
+    border-color: #eb0202;
+    background-color: #eb0202;
+    box-shadow: #eb0202 0 0 0 2px;
   }
   .uploadGrp {
     position: relative;
@@ -5926,29 +5923,29 @@
     overflow: hidden;
     top: 10px;
     right: 0.5em;
-    background: #038187;
-    border: 1px solid #038187;
+    background: #eb0202;
+    border: 1px solid #eb0202;
     color: #fff;
     padding: 0.2em 1em;
     border-radius: 4px;
   }
   .uploadGrp .uploadBtn:hover {
-    background: #025155;
-    border: 1px solid #012223;
+    background: #b80202;
+    border: 1px solid #860101;
     cursor: pointer;
     color: #fff;
     outline: none;
   }
   .uploadGrp .uploadBtn:focus-visible {
-    background: #025155;
-    border: 1px solid #012223;
+    background: #b80202;
+    border: 1px solid #860101;
     cursor: pointer;
     color: #fff;
     outline: none;
     box-shadow: 0 0px 0px 2px #1c8e93;
   }
   .uploadGrp .uploadBtn.active {
-    background: #0499a0;
+    background: #fd0a0a;
     cursor: pointer;
   }
   .uploadGrp .uploadBtn:hover, .uploadGrp .uploadBtn:focus-visible {
@@ -6261,7 +6258,7 @@
     cursor: pointer;
   }
   .lp table td a:focus-visible {
-    outline: #02676c 2px solid;
+    outline: #d30000 2px dashed;
   }
   .lp table td.date {
     text-align: center;
@@ -6384,7 +6381,7 @@
     cursor: pointer;
   }
   .submenu li a:focus-visible {
-    outline: #02676c 2px solid;
+    outline: #d30000 2px dashed;
   }
   .submenu li a .num {
     position: absolute;
@@ -6504,7 +6501,7 @@
     cursor: pointer;
   }
   .thumbnail a:focus-visible {
-    outline: #02676c 2px solid;
+    outline: #d30000 2px dashed;
   }
   .thumbnail a:focus-visible:before {
     content: "";
@@ -6955,8 +6952,8 @@
   }
   .pagination .page li.active a {
     color: #fff;
-    background: #038187;
-    border: #02696e solid 1px;
+    background: #eb0202;
+    border: #d20202 solid 1px;
   }
   .pagination .page li.last a:after, .pagination .page li.last a:before, .pagination .page li.next a:before, .pagination .page li.prev a:before, .pagination .page li.first a:after, .pagination .page li.first a:before {
     content: "";
@@ -8822,7 +8819,7 @@
     cursor: pointer;
   }
   .cp a:focus-visible {
-    outline: #02676c 2px solid;
+    outline: #d30000 2px dashed;
   }
   .cp .publishInfo {
     font-size: 0.875em;
@@ -9188,7 +9185,7 @@
     cursor: pointer;
   }
   .webLink li a:focus-visible {
-    outline: #02676c 2px solid;
+    outline: #d30000 2px dashed;
   }
 }
 .colorA a:hover {

@@ -217,7 +217,7 @@
       <!-- main Start -->
       <main id="center" class="main mp">
         <a class="accessKey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
-        <section class="mpSlider">
+        <section class="mpSlider wow fadeInUp" data-wow-duration="2s" data-wow-delay="0s">
           <div class="container">
             <div class="swiper">
               <div class="swiper-wrapper">
@@ -241,7 +241,7 @@
             <button class="nextSlider swiperArrow"></button>
           </div>
         </section>
-        <section class="navBar">
+        <section class="navBar wow fadeInRight" data-wow-duration="1s" data-wow-delay="1s">
           <ul>
             <li>
               <a href="#"><img src="images/icon/icon_digital_dark.svg" alt="" />數位資源 </a>
@@ -266,7 +266,7 @@
             </li>
           </ul>
         </section>
-        <section class="news">
+        <section class="news wow fadeInDown" data-wow-duration="1s" data-wow-delay=".2s">
           <div class="container">
             <div class="tabSet">
               <div class="tabItems">
@@ -444,7 +444,7 @@
         <section class="infoGrp">
           <div class="container">
             <!-- 行事曆區塊 -->
-            <div class="calendar">
+            <div class="calendar wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s">
               <h2 class="sectionTitle">行事曆</h2>
               <p>休館日與開放日一覽表</p>
               <div class="dateSelect">
@@ -588,7 +588,7 @@
               </table>
               <div class="remark"><span class="closed">休館日</span><span class="today">今日</span></div>
             </div>
-            <div class="activityInfo">
+            <div class="activityInfo wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
               <h2 class="sectionTitle">活動訊息</h2>
               <div class="tabSet">
                 <div class="tabItems">
@@ -887,7 +887,7 @@
           <div class="container">
             <h2 class="sectionTitle">社群互動</h2>
             <ul>
-              <li class="fb">
+              <li class="fb wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s">
                 <a href="#" title="facebook">
                   <div class="iconWrap">
                     <img src="images/basic/icon_facebook_w.svg" alt="" />
@@ -895,7 +895,7 @@
                   臺圖
                 </a>
               </li>
-              <li class="fb fbChungshan">
+              <li class="fb fbChungshan wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
                 <a href="#" title="中山樓">
                   <div class="iconWrap">
                     <img src="images/basic/icon_facebook_w.svg" alt="" />
@@ -903,7 +903,7 @@
                   中山樓
                 </a>
               </li>
-              <li class="youtube">
+              <li class="youtube wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".6s">
                 <a href="#" title="youtube">
                   <div class="iconWrap">
                     <img src="images/basic/icon_youtube_w.svg" alt="" />
@@ -911,7 +911,7 @@
                   Youtube
                 </a>
               </li>
-              <li class="podcast">
+              <li class="podcast wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".8s">
                 <a href="#" title="Apple Podcast">
                   <div class="iconWrap">
                     <img src="images/basic/icon_podcast.svg" alt="" />
@@ -919,7 +919,7 @@
                   Apple Podcast
                 </a>
               </li>
-              <li class="soundon">
+              <li class="soundon wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
                 <a href="#" title="SoundOn">
                   <div class="iconWrap">
                     <img src="images/basic/icon_soundon.svg" alt="" />
@@ -935,7 +935,7 @@
             <!-- 讀者服務 -->
             <div class="serviceSlider serviceSlider-1">
               <h2 class="sectionTitle">讀者服務</h2>
-              <div class="swiperBox">
+              <div class="swiperBox wow fadeInDown" data-wow-duration="1s" data-wow-delay=".2s">
                 <div class="swiper">
                   <div class="swiper-wrapper">
                     <div class="serviceList swiper-slide">
@@ -970,7 +970,7 @@
             <!-- 相關服務 -->
             <div class="serviceSlider serviceSlider-2">
               <h2 class="sectionTitle">相關服務</h2>
-              <div class="swiperBox">
+              <div class="swiperBox wow fadeInDown" data-wow-duration="1s" data-wow-delay=".4s">
                 <div class="swiper">
                   <div class="swiper-wrapper">
                     <div class="serviceList swiper-slide">
@@ -1003,7 +1003,7 @@
             <!-- 相關服務 -->
             <div class="serviceSlider serviceSlider-3">
               <h2 class="sectionTitle">主題服務</h2>
-              <div class="swiperBox">
+              <div class="swiperBox wow fadeInDown" data-wow-duration="1s" data-wow-delay=".6s">
                 <div class="swiper">
                   <div class="swiper-wrapper">
                     <div class="serviceList swiper-slide">
@@ -1212,7 +1212,7 @@
       </section>
       <!-- fatFooter End -->
       <!-- footer Start-->
-      <footer>
+      <footer class="wow fadeInDown" data-wow-duration="1s" data-wow-delay=".2s">
         <div class="container">
           <a class="accessKey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
           <div class="footerInfo">
@@ -1251,7 +1251,11 @@
     <script src="vendor/fancybox/fancybox.js"></script>
     <!-- swiper -->
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
-
+    <!-- wow js -->
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
     <!-- main js-->
     <script src="js/main.js"></script>
     <!-- js -->

@@ -46,7 +46,7 @@
     cursor: pointer;
   }
   &:focus-visible {
-    outline: $aHover 2px solid;
+    outline: $colorRed 2px dashed;
   }
 }
 

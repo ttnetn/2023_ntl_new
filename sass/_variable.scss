@@ -25,7 +25,7 @@ $aColor: $colorPrimary;
 $aHover: mix($aColor, #000, 80%);
 $aFocus: mix($aColor, #fff, 90%);
 // 表單focus顏色
-$formFocus: $colorPrimary; //表單
+$formFocus: $colorImportant; //表單
 $form-btn: $colorPrimary; //表單
 // 按鈕設定
 $btn-border: mix($btnWordColor, #000, 10%);
