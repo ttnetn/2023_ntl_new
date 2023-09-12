@@ -44,8 +44,8 @@
       &.active {
         a {
           color: #fff;
-          background: $formFocus;
-          border: darken($formFocus, 5) solid 1px;
+          background: $aFocus;
+          border: darken($aFocus, 5) solid 1px;
         }
       }
       %arrow {

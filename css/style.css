@@ -2738,7 +2738,6 @@
     cursor: pointer;
     color: #fff;
     outline: none;
-    box-shadow: 0 0px 0px 2px #1c8e93;
   }
   .btn.active {
     background: #ededed;
@@ -2766,7 +2765,6 @@
     cursor: pointer;
     color: #fff;
     outline: none;
-    box-shadow: 0 0px 0px 2px #1c8e93;
   }
   .btnGreen.active {
     background: #2f9b2f;
@@ -2790,7 +2788,6 @@
     cursor: pointer;
     color: #fff;
     outline: none;
-    box-shadow: 0 0px 0px 2px #1c8e93;
   }
   .btnBlue.active {
     background: #0073e6;
@@ -2814,7 +2811,6 @@
     cursor: pointer;
     color: #fff;
     outline: none;
-    box-shadow: 0 0px 0px 2px #1c8e93;
   }
   .btnYellow.active {
     background: #fecd36;
@@ -2838,7 +2834,6 @@
     cursor: pointer;
     color: #fff;
     outline: none;
-    box-shadow: 0 0px 0px 2px #1c8e93;
   }
   .btnOrange.active {
     background: #ff871a;
@@ -2862,7 +2857,6 @@
     cursor: pointer;
     color: #fff;
     outline: none;
-    box-shadow: 0 0px 0px 2px #1c8e93;
   }
   .btnRed.active {
     background: #ed0000;
@@ -2886,7 +2880,6 @@
     cursor: pointer;
     color: #fff;
     outline: none;
-    box-shadow: 0 0px 0px 2px #1c8e93;
   }
   .btnPurple.active {
     background: #a029a2;
@@ -2910,7 +2903,6 @@
     cursor: pointer;
     color: #fff;
     outline: none;
-    box-shadow: 0 0px 0px 2px #1c8e93;
   }
   .btnSubmit.active {
     background: #04b1b9;
@@ -2937,7 +2929,6 @@
     cursor: pointer;
     color: #fff;
     outline: none;
-    box-shadow: 0 0px 0px 2px #1c8e93;
   }
   .btnSearch.active {
     background: #0499a0;
@@ -3694,24 +3685,23 @@
     flex-wrap: wrap;
   }
   .category ul li {
-    margin: 0px 3px 3px 0px;
+    margin: 0px 5px 5px 0px;
     display: block;
   }
   .category a {
-    border: 1px solid #aaa;
-    padding: 0.25em 0.75em;
+    border: 1px solid #038187;
+    padding: 0.25em 1em;
     display: block;
     color: #333;
-    font-size: 0.875rem;
+    font-size: 1rem;
     box-sizing: border-box;
-  }
-  .category a:before {
-    content: "#";
-    margin-right: 0.25em;
+    border-radius: 2em;
+    background-color: #038187;
+    color: #fff;
   }
   .category a:hover, .category a:focus, .category a.active {
     color: #fff;
-    background: #0499a0;
+    background: #02676c;
     border: 1px solid #0499a0;
     box-shadow: none;
   }
@@ -5941,7 +5931,6 @@
     cursor: pointer;
     color: #fff;
     outline: none;
-    box-shadow: 0 0px 0px 2px #1c8e93;
   }
   .uploadGrp .uploadBtn.active {
     background: #fd0a0a;
@@ -6903,8 +6892,8 @@
   }
   .pagination .page li.active a {
     color: #fff;
-    background: #eb0202;
-    border: #d20202 solid 1px;
+    background: #1c8e93;
+    border: #18797e solid 1px;
   }
   .pagination .page li.last a:after, .pagination .page li.last a:before, .pagination .page li.next a:before, .pagination .page li.prev a:before, .pagination .page li.first a:after, .pagination .page li.first a:before {
     content: "";
