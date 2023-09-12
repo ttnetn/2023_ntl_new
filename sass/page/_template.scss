@@ -70,7 +70,7 @@ body {
   & > .container {
     padding-top: 1em;
     @include gutter(); //gutter 代表左右要留白
-    display: flex;
+    //display: flex;
   }
   .centerBlock {
     flex: none;
