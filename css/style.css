@@ -2748,144 +2748,6 @@
     color: #222;
     outline: none;
   }
-  .btnGreen {
-    background: #298729;
-    border: 1px solid #298729;
-    color: #fff;
-  }
-  .btnGreen:hover {
-    background: #1d601d;
-    border: 1px solid #113911;
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-  }
-  .btnGreen:focus-visible {
-    background: #1d601d;
-    border: 1px solid #113911;
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-  }
-  .btnGreen.active {
-    background: #2f9b2f;
-    cursor: pointer;
-  }
-  .btnBlue {
-    background: #0066cc;
-    border: 1px solid #0066cc;
-    color: #fff;
-  }
-  .btnBlue:hover {
-    background: #004d99;
-    border: 1px solid #003366;
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-  }
-  .btnBlue:focus-visible {
-    background: #004d99;
-    border: 1px solid #003366;
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-  }
-  .btnBlue.active {
-    background: #0073e6;
-    cursor: pointer;
-  }
-  .btnYellow {
-    background: #fec61c;
-    border: 1px solid #fec61c;
-    color: #333;
-  }
-  .btnYellow:hover {
-    background: #e7ae01;
-    border: 1px solid #b48801;
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-  }
-  .btnYellow:focus-visible {
-    background: #e7ae01;
-    border: 1px solid #b48801;
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-  }
-  .btnYellow.active {
-    background: #fecd36;
-    cursor: pointer;
-  }
-  .btnOrange {
-    background: #ff7a00;
-    border: 1px solid #ff7a00;
-    color: #fff;
-  }
-  .btnOrange:hover {
-    background: #cc6200;
-    border: 1px solid #994900;
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-  }
-  .btnOrange:focus-visible {
-    background: #cc6200;
-    border: 1px solid #994900;
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-  }
-  .btnOrange.active {
-    background: #ff871a;
-    cursor: pointer;
-  }
-  .btnRed {
-    background: #d30000;
-    border: 1px solid #d30000;
-    color: #fff;
-  }
-  .btnRed:hover {
-    background: #a00000;
-    border: 1px solid #6d0000;
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-  }
-  .btnRed:focus-visible {
-    background: #a00000;
-    border: 1px solid #6d0000;
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-  }
-  .btnRed.active {
-    background: #ed0000;
-    cursor: pointer;
-  }
-  .btnPurple {
-    background: #8c248d;
-    border: 1px solid #8c248d;
-    color: #fff;
-  }
-  .btnPurple:hover {
-    background: #641a65;
-    border: 1px solid #3c0f3c;
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-  }
-  .btnPurple:focus-visible {
-    background: #641a65;
-    border: 1px solid #3c0f3c;
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-  }
-  .btnPurple.active {
-    background: #a029a2;
-    cursor: pointer;
-  }
   .btnSubmit {
     background: #0499a0;
     border: 1px solid #0499a0;
@@ -2943,6 +2805,7 @@
   .btnPrimary:hover, .btnPrimary:focus-visible {
     background: #025155;
     border: solid 1px #038187;
+    color: #fff;
   }
   .btnSecondary {
     background: #fff;
@@ -5831,7 +5694,7 @@
   input[type=password]:focus-visible,
   textarea:focus-visible,
   select:focus-visible {
-    box-shadow: 0px 0px 0px 2px #fd2323;
+    box-shadow: 0px 0px 0px 2px #24b7be;
     outline: none;
   }
   button:focus,
@@ -5876,8 +5739,8 @@
   input[type=checkbox]:focus,
   input[type=radio]:checked,
   input[type=radio]:focus {
-    border-color: #eb0202;
-    background-color: #eb0202;
+    border-color: #1c8e93;
+    background-color: #1c8e93;
     outline: none;
   }
   input[type=checkbox]:checked {
@@ -5885,18 +5748,18 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 98%;
-    box-shadow: #eb0202 0 0 0 2px;
+    box-shadow: #1c8e93 0 0 0 2px;
     border-radius: 2px;
   }
   input[type=radio]:focus {
-    border-color: #eb0202;
-    background-color: #eb0202;
-    box-shadow: #fff 0 0 0 3px inset, #eb0202 0 0 0 2px;
+    border-color: #1c8e93;
+    background-color: #1c8e93;
+    box-shadow: #fff 0 0 0 3px inset, #1c8e93 0 0 0 2px;
   }
   input[type=checkbox]:focus {
-    border-color: #eb0202;
-    background-color: #eb0202;
-    box-shadow: #eb0202 0 0 0 2px;
+    border-color: #1c8e93;
+    background-color: #1c8e93;
+    box-shadow: #1c8e93 0 0 0 2px;
   }
   .uploadGrp {
     position: relative;
@@ -5911,28 +5774,28 @@
     overflow: hidden;
     top: 10px;
     right: 0.5em;
-    background: #eb0202;
-    border: 1px solid #eb0202;
+    background: #1c8e93;
+    border: 1px solid #1c8e93;
     color: #fff;
     padding: 0.2em 1em;
     border-radius: 4px;
   }
   .uploadGrp .uploadBtn:hover {
-    background: #b80202;
-    border: 1px solid #860101;
+    background: #146568;
+    border: 1px solid #0c3b3d;
     cursor: pointer;
     color: #fff;
     outline: none;
   }
   .uploadGrp .uploadBtn:focus-visible {
-    background: #b80202;
-    border: 1px solid #860101;
+    background: #146568;
+    border: 1px solid #0c3b3d;
     cursor: pointer;
     color: #fff;
     outline: none;
   }
   .uploadGrp .uploadBtn.active {
-    background: #fd0a0a;
+    background: #20a3a8;
     cursor: pointer;
   }
   .uploadGrp .uploadBtn:hover, .uploadGrp .uploadBtn:focus-visible {
@@ -6330,28 +6193,28 @@
     margin: 1em 0;
     border-top: 1px solid #ececec;
   }
-  .bookList .bookBlock {
+  .itemBlock {
     display: flex;
     gap: 30px;
     padding: 1em 0;
     border-bottom: 1px solid #ececec;
   }
-  .bookList .bookBlock .bookCover {
+  .itemBlock .bookCover {
     flex: 0 0 20%;
   }
-  .bookList .bookBlock .bookCover a {
+  .itemBlock .bookCover a {
     display: flex;
     border: 1px solid #ccc;
   }
-  .bookList .bookBlock .bookCover a img {
+  .itemBlock .bookCover a img {
     width: 100%;
   }
-  .bookList .bookBlock .textContainer .bookTitle {
+  .itemBlock .textContainer .bookTitle {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 1em;
   }
-  .bookList .bookBlock .textContainer .bookInfo ul {
+  .itemBlock .textContainer .bookInfo ul {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -6359,12 +6222,12 @@
     flex-wrap: wrap;
     gap: 10px 20px;
   }
-  .bookList .bookBlock .textContainer .bookInfo li {
+  .itemBlock .textContainer .bookInfo li {
     flex-basis: calc(50% - 10px);
     max-width: 50%;
     word-break: break-word;
   }
-  .bookList .bookBlock .textContainer .bookInfo p {
+  .itemBlock .textContainer .bookInfo p {
     word-break: break-word;
     overflow: hidden;
     text-overflow: -o-ellipsis-lastline;
@@ -6375,11 +6238,11 @@
     line-height: 1.6em;
     height: calc(1.6em * 3);
   }
-  .bookList .bookBlock .textContainer .moreLink {
+  .itemBlock .textContainer .moreLink {
     display: flex;
     justify-content: flex-end;
   }
-  .bookList .bookBlock .textContainer .moreLink a {
+  .itemBlock .textContainer .moreLink a {
     display: block;
     padding: 0.5em 1.5em;
     background-color: #038187;
@@ -6387,10 +6250,10 @@
     color: #fff;
     border-radius: 2em;
   }
-  .bookList .bookBlock .textContainer .moreLink a:hover {
+  .itemBlock .textContainer .moreLink a:hover {
     background-color: #02676c;
   }
-  .bookList .bookBlock .textContainer .moreLink a i {
+  .itemBlock .textContainer .moreLink a i {
     margin: 0 0.25em;
   }
   .submenu ul,
@@ -9246,6 +9109,11 @@
   }
   .feedback .btnGrp {
     padding: 0;
+  }
+  .orderPanel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 .colorA a:hover {

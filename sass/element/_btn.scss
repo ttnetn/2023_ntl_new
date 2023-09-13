@@ -70,30 +70,30 @@
 }
 //按鈕顏色
 //@include btnSetting(按鈕顏色,字的顏色);
-.btnGreen {
-  // @extend %btn;
-  @include btnSetting($colorGreen, #fff);
-}
-.btnBlue {
-  // @extend %btn;
-  @include btnSetting($colorBlue, #fff);
-}
-.btnYellow {
-  // @extend %btn;
-  @include btnSetting(lighten($colorYellow, 5), #333);
-}
-.btnOrange {
-  // @extend %btn;
-  @include btnSetting(lighten($colorOrange, 0), #fff);
-}
-.btnRed {
-  // @extend %btn;
-  @include btnSetting($colorRed, #fff);
-}
-.btnPurple {
-  // @extend %btn;
-  @include btnSetting(lighten($colorPurple, 5), #fff);
-}
+// .btnGreen {
+//   // @extend %btn;
+//   @include btnSetting($colorGreen, #fff);
+// }
+// .btnBlue {
+//   // @extend %btn;
+//   @include btnSetting($colorBlue, #fff);
+// }
+// .btnYellow {
+//   // @extend %btn;
+//   @include btnSetting(lighten($colorYellow, 5), #333);
+// }
+// .btnOrange {
+//   // @extend %btn;
+//   @include btnSetting(lighten($colorOrange, 0), #fff);
+// }
+// .btnRed {
+//   // @extend %btn;
+//   @include btnSetting($colorRed, #fff);
+// }
+// .btnPurple {
+//   // @extend %btn;
+//   @include btnSetting(lighten($colorPurple, 5), #fff);
+// }
 .btnSubmit {
   // @extend %btn;
   @include btnSetting(lighten($colorPrimary, 5), #fff);
@@ -116,6 +116,7 @@
   &:focus-visible {
     background: darken($colorPrimary, 10);
     border: solid 1px $colorPrimary;
+    color: #fff;
   }
 }
 // 次要按鈕
