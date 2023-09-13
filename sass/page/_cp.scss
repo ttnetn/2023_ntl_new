@@ -90,6 +90,26 @@ h2.title {
       }
     }
   }
+  .underline {
+    text-decoration: underline;
+  }
+  table.flow {
+    margin-bottom: 1em;
+    td {
+      text-align: center;
+      vertical-align: middle;
+      border-color: #333;
+      &:not(.box) {
+        border: none;
+      }
+    }
+    .arrow {
+      width: 60px;
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
 
 // 檔案下載
@@ -303,5 +323,25 @@ h2.title {
       display: block;
       @include aSetting($colorWord);
     }
+  }
+}
+.feedback {
+  padding: 1em 1.5em;
+  background-color: rgba($colorLight, 0.4);
+  border-radius: 20px;
+  margin-bottom: 1em;
+  width: 500px;
+  max-width: 100%;
+  fieldset {
+    margin-bottom: 0.5em;
+    legend {
+      font-weight: bold;
+    }
+  }
+  p {
+    margin-bottom: 0.5em;
+  }
+  .btnGrp {
+    padding: 0;
   }
 }

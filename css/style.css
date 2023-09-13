@@ -2714,6 +2714,7 @@
     padding: 0.5em 1.25em;
     min-width: 4em;
     margin: 0.25em 0.1em;
+    border-radius: 2em;
   }
   .uploadGrp .uploadBtn i, .btn i {
     margin-right: 0.25em;
@@ -6133,9 +6134,9 @@
   .fixThTable th,
   .fixThTable td {
     width: 10em;
-    padding: 0.8em 0;
+    padding: 0.8em 0.5em;
     text-align: center;
-    line-height: 1.2;
+    line-height: 1.6em;
   }
   @media screen and (max-width: 767px) {
     .fixThTable th,
@@ -7440,7 +7441,7 @@
   }
   .innerPage {
     position: relative;
-    background: linear-gradient(180deg, rgba(243, 241, 132, 0.8) 0%, rgba(234, 242, 132, 0.5) 15%, rgba(227, 243, 132, 0) 28%);
+    background: linear-gradient(180deg, rgba(243, 241, 132, 0.8) 0%, rgba(234, 242, 132, 0.5) 150px, rgba(227, 243, 132, 0) 280px);
     margin-top: 106px;
   }
   .innerPage::before {
@@ -8866,6 +8867,26 @@
       flex: 1 1 100%;
     }
   }
+  .cp .underline {
+    text-decoration: underline;
+  }
+  .cp table.flow {
+    margin-bottom: 1em;
+  }
+  .cp table.flow td {
+    text-align: center;
+    vertical-align: middle;
+    border-color: #333;
+  }
+  .cp table.flow td:not(.box) {
+    border: none;
+  }
+  .cp table.flow .arrow {
+    width: 60px;
+  }
+  .cp table.flow .arrow img {
+    width: 100%;
+  }
   .fileDownload {
     width: 100%;
     margin: 0 auto 2em;
@@ -9205,6 +9226,26 @@
   }
   .webLink li a:focus-visible {
     outline: #d30000 2px dashed;
+  }
+  .feedback {
+    padding: 1em 1.5em;
+    background-color: rgba(255, 172, 47, 0.4);
+    border-radius: 20px;
+    margin-bottom: 1em;
+    width: 500px;
+    max-width: 100%;
+  }
+  .feedback fieldset {
+    margin-bottom: 0.5em;
+  }
+  .feedback fieldset legend {
+    font-weight: bold;
+  }
+  .feedback p {
+    margin-bottom: 0.5em;
+  }
+  .feedback .btnGrp {
+    padding: 0;
   }
 }
 .colorA a:hover {
