@@ -25,6 +25,10 @@
       width: 100%;
     }
   }
+  a {
+    color: darken($aColor, 5);
+    text-decoration: underline;
+  }
   a.close {
     position: absolute;
     width: 12px;
