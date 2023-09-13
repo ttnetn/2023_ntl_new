@@ -6193,6 +6193,27 @@
     margin: 1em 0;
     border-top: 1px solid #ececec;
   }
+  .bookList .bookInfo ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 20px;
+  }
+  .bookList .bookInfo li {
+    flex-basis: calc(50% - 10px);
+    max-width: 50%;
+  }
+  .commodityList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .commodityList .itemBlock {
+    flex-basis: calc(50% - 15px);
+    border-bottom: 0;
+  }
+  .commodityList .itemBlock .bookCover {
+    flex-basis: 33.33333%;
+  }
   .itemBlock {
     display: flex;
     gap: 30px;
@@ -6218,14 +6239,10 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px 20px;
   }
   .itemBlock .textContainer .bookInfo li {
-    flex-basis: calc(50% - 10px);
-    max-width: 50%;
     word-break: break-word;
+    margin-bottom: 10px;
   }
   .itemBlock .textContainer .bookInfo p {
     word-break: break-word;
