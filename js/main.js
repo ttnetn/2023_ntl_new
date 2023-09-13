@@ -361,7 +361,7 @@ function topNav() {
 function searchTypeB() {
   const siteHeader = document.querySelector('.header .container');
   const searchBtnOut = document.querySelector('.wrapper .submenuBox') || null;
-  const webSearch = document.querySelector('.wrapper .webSearch.typeB') || null;
+  const webSearch = document.querySelector('.wrapper .webSearch') || null;
   const searchBtn = document.querySelector('.wrapper .webSearchBtn button') || null;
   const menuOverlay = document.querySelector('.menuOverlay');
   const body = document.querySelector('body');
@@ -376,8 +376,10 @@ function searchTypeB() {
     });
     // --- Keydown
     item.addEventListener('keydown', (e) => {
-      slider.jsSlideToggle(webSearch, 200);
-      jsFadeToggle(menuOverlay);
+      if (webSearch.classList.contains('typeB')) {
+        slider.jsSlideToggle(webSearch, 200);
+        jsFadeToggle(menuOverlay);
+      }
     });
   };
 
@@ -394,7 +396,7 @@ function searchTypeB() {
       windowWidth = window.outerWidth;
       webSearch.removeAttribute('style');
       const observer = new ResizeObserver(function (entries) {
-        if (entries[0].contentRect.width <= 767) {
+        if (entries[0].contentRect.width <= windowWidthSmall) {
           !webSearchBtn.classList.contains('active') && webSearchBtn.classList.add('active');
           !webSearch.classList.contains('mobile') && webSearch.classList.add('mobile');
           let webSearchTop = document.querySelector('header').offsetHeight;
@@ -421,8 +423,10 @@ function searchTypeB() {
     const lastNodes = nodes[nodes.length - 1];
     lastNodes.addEventListener('focusout', (e) => {
       e.preventDefault();
-      slider.jsSlideUp(webSearch, 200);
-      jsFadeToggle(menuOverlay);
+      if (webSearch.classList.contains('typeB')) {
+        slider.jsSlideUp(webSearch, 200);
+        jsFadeToggle(menuOverlay);
+      }
     });
     // --- 關閉
     function clickOtherPlace(e) {

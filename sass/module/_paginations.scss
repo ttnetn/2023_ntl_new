@@ -24,15 +24,16 @@
       a {
         min-width: 40px;
         height: 40px;
-        border-radius: 5px;
-        padding: 6px 10px;
+        border-radius: 50%;
+        padding: 0 10px;
+        line-height: 40px;
         font-weight: 700;
         display: block;
         white-space: nowrap;
         font-size: 1em;
         color: $colorWord;
-        background: #eee;
-        border: #ccc solid 1px;
+        background: #fff;
+        border: #fff solid 1px;
         margin: 0 0.1em 0.25em;
         &:hover,
         &:focus-visible {
