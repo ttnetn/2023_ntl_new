@@ -12,15 +12,13 @@
     }
   }
   a {
-    border: 1px solid $aColor;
-    padding: 0.25em 1em;
+    border: 1px solid $colorPrimary;
+    padding: 0.25em 0.65em;
     display: block;
-    color: #333;
-    font-size: 1rem;
+    font-size: rem(14);
     box-sizing: border-box;
     border-radius: 2em;
-    background-color: $aColor;
-    color: #fff;
+    background-color: transparent;
     &:hover,
     &:focus,
     &.active {

@@ -73,3 +73,66 @@
     }
   }
 }
+
+.bookList {
+  margin: 1em 0;
+  border-top: 1px solid $colorLightGray;
+  .bookBlock {
+    display: flex;
+    gap: 30px;
+    padding: 1em 0;
+    border-bottom: 1px solid $colorLightGray;
+    .bookCover {
+      flex: 0 0 20%;
+      a {
+        display: flex;
+        border: 1px solid $colorGray;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .textContainer {
+      .bookTitle {
+        font-size: rem(24);
+        font-weight: bold;
+        margin-bottom: 1em;
+      }
+      .bookInfo {
+        ul {
+          @include liReset;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px 20px;
+        }
+        li {
+          flex-basis: calc(50% - 10px);
+          max-width: 50%;
+          word-break: break-word;
+        }
+        p {
+          word-break: break-word;
+          @include textLine(3, 1.6em);
+        }
+      }
+      .moreLink {
+        display: flex;
+        justify-content: flex-end;
+        a {
+          display: block;
+          padding: 0.5em 1.5em;
+          background-color: $aColor;
+          margin: 5px;
+          color: #fff;
+          border-radius: 2em;
+          &:hover {
+            background-color: $aHover;
+          }
+          i {
+            margin: 0 0.25em;
+          }
+        }
+      }
+    }
+  }
+}
