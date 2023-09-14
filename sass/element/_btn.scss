@@ -121,15 +121,14 @@
 }
 // 次要按鈕
 .btnSecondary {
-  background: #fff;
-  color: darken($colorPrimary, 15);
-  border: solid 1px $colorPrimary;
+  background: $colorSecondary;
+  color: $colorWord;
+  border: solid 1px $colorSecondary;
   text-shadow: none;
   &:hover,
   &:focus-visible {
-    color: darken($colorPrimary, 30);
-    background: #b5deff;
-    border: solid 1px #b5deff;
+    background: darken($colorSecondary, 15);
+    border: solid 1px $colorSecondary;
   }
 }
 // 一般按鈕

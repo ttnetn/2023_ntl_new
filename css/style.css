@@ -2807,15 +2807,14 @@
     color: #fff;
   }
   .btnSecondary {
-    background: #fff;
-    color: #01393c;
-    border: solid 1px #038187;
+    background: #e3f384;
+    color: #333;
+    border: solid 1px #e3f384;
     text-shadow: none;
   }
   .btnSecondary:hover, .btnSecondary:focus-visible {
-    color: black;
-    background: #b5deff;
-    border: solid 1px #b5deff;
+    background: #d3ec3e;
+    border: solid 1px #e3f384;
   }
   .btnNormal {
     background: #f1f1f1;
