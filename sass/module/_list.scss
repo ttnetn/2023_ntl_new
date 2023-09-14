@@ -120,54 +120,60 @@
     }
   }
   .textContainer {
-    .bookTitle {
-      font-size: rem(20);
-      font-weight: bold;
-      margin-bottom: 1rem;
-      line-height: 1.5;
+    flex-grow: 1;
+  }
+  .blockTitle {
+    font-size: rem(20);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  .blockInfo {
+    ul {
+      @include liReset;
     }
-    .bookInfo {
-      ul {
-        @include liReset;
-      }
-      li {
-        word-break: break-word;
-        margin-bottom: 10px;
-      }
-      p {
-        word-break: break-word;
-        @include textLine(3, 1.6em);
-      }
+    li {
+      word-break: break-word;
+      margin-bottom: 10px;
     }
-    .moreLink {
-      display: flex;
-      justify-content: flex-end;
-      a {
-        display: block;
-        padding: 0.5em 1.5em;
-        background-color: $aColor;
-        margin: 5px;
-        color: #fff;
-        border-radius: 2em;
-        &:hover {
-          background-color: $aHover;
-        }
-        i {
-          margin: 0 0.25em;
-        }
-      }
+    p {
+      word-break: break-word;
+      @include textLine(3, 1.6em);
     }
-    .orderLink {
-      display: flex;
-      align-items: center;
-      .btn {
-        margin-right: 10px;
+  }
+  .moreLink {
+    display: flex;
+    justify-content: flex-end;
+    a {
+      display: block;
+      padding: 0.5em 1.5em;
+      background-color: $aColor;
+      margin: 5px;
+      color: #fff;
+      border-radius: 2em;
+      &:hover {
+        background-color: $aHover;
       }
-      .inventory {
-        span {
-          color: $colorRed;
-        }
+      i {
+        margin: 0 0.25em;
       }
     }
+  }
+  .orderLink {
+    display: flex;
+    align-items: center;
+    .btn {
+      margin-right: 10px;
+    }
+    .inventory {
+      span {
+        color: $colorRed;
+      }
+    }
+  }
+}
+.eventList {
+  .itemBlock {
+    display: block;
   }
 }
