@@ -157,6 +157,7 @@ table {
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-behavior: smooth;
+  margin-bottom: 1em;
   @include screen('mobile') {
     width: 100%;
     display: block;
@@ -262,6 +263,43 @@ table {
 //   }
 // }
 
+.orderList {
+  margin: 1em 0;
+  table {
+    th,
+    td {
+      border: none;
+    }
+  }
+  th {
+    background-color: $colorPrimary;
+    color: #fff;
+  }
+  td {
+    text-align: center;
+    a {
+      img {
+        width: 150px;
+      }
+    }
+  }
+  input {
+    width: 60px;
+    text-align: center;
+  }
+  .btnRemove {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-color: $aColor;
+    font-size: 0;
+    background: $aColor url(../images/icon/icon_trash.svg) center no-repeat;
+    background-size: 18px;
+    &:hover {
+      background-color: $aHover;
+    }
+  }
+}
 // scrollTable style
 .tableWrapper {
   & > div {
