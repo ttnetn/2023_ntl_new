@@ -121,9 +121,10 @@
   }
   .textContainer {
     .bookTitle {
-      font-size: rem(24);
+      font-size: rem(20);
       font-weight: bold;
-      margin-bottom: 1em;
+      margin-bottom: 1rem;
+      line-height: 1.5;
     }
     .bookInfo {
       ul {

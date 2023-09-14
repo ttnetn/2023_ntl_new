@@ -1452,10 +1452,10 @@ function tableAddDataAttributes(obj) {
     }
   });
 }
-// tableAddDataAttributes({
-//   elemClass: '.tableList',
-//   dataName: 'title',
-// }); // tableList樣式 加上 data-title
+tableAddDataAttributes({
+  elemClass: '.tableList',
+  dataName: 'title',
+}); // tableList樣式 加上 data-title
 
 // -----------------------------------------------------------------------
 // -----   scrollTables   ------------------------------------------------

@@ -7,10 +7,10 @@ window.addEventListener('load', () => {
   scrollTables('.tableWrapper'); // table捲動功能
   mobileSearch();
 
-  tableAddDataAttributes({
-    elemClass: '.tableList', // 目標table
-    dataName: 'title', // tableList樣式 加上 data-title
-  });
+  // tableAddDataAttributes({
+  //   elemClass: '.tableList', // 目標table
+  //   dataName: 'title', // tableList樣式 加上 data-title
+  // });
 
   // 全站字體
   fontSize();

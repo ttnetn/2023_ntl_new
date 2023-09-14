@@ -1,7 +1,6 @@
 @charset "UTF-8";
 @import '../vendor/swiper/swiper-bundle.min.css';
 @import '../vendor/fancybox/fancybox.css';
-@import '../vendor/pg_calendar/css/pignose.calendar.css';
 @import '../css/animate.css';
 .breadcrumb ul li + li:before {
   content: " / ";
@@ -3897,6 +3896,7 @@
     .header {
       position: fixed;
       width: 100%;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
     }
   }
   .header:before {
@@ -5997,9 +5997,9 @@
   .fixThTable th,
   .fixThTable td {
     width: 10em;
-    padding: 0.8em 0.5em;
+    padding: 0.8em 0;
     text-align: center;
-    line-height: 1.6em;
+    line-height: 1.2;
   }
   @media screen and (max-width: 767px) {
     .fixThTable th,
@@ -6062,10 +6062,10 @@
       min-width: 600px;
     }
   }
-  .scrollTable {
+  .tableWrapper > .tableScroll > table {
     min-width: 600px;
   }
-  .scrollTable caption {
+  .tableWrapper > .tableScroll > table caption {
     position: absolute;
     left: -10000px;
     top: auto;
@@ -6073,7 +6073,7 @@
     height: 1px;
     overflow: hidden;
   }
-  .tableWrapper {
+  .tableWrapper > div {
     overflow-x: scroll;
     overflow-y: hidden;
     scroll-behavior: smooth;
@@ -6236,9 +6236,10 @@
     border: 1px solid #ccc;
   }
   .itemBlock .textContainer .bookTitle {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: bold;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
+    line-height: 1.5;
   }
   .itemBlock .textContainer .bookInfo ul {
     margin: 0;
@@ -6573,7 +6574,7 @@
     height: 32px;
     text-align: center;
     line-height: 32px;
-    background: #e3f384;
+    background: #ececec;
     position: relative;
     font-size: 0.875rem;
     padding: 0 0.65em 0 2.15em;
@@ -6843,8 +6844,8 @@
     white-space: nowrap;
     font-size: 1em;
     color: #333;
-    background: #fff;
-    border: #fff solid 1px;
+    background: #eee;
+    border: #eee solid 1px;
     margin: 0 0.1em 0.25em;
   }
   .pagination .page li a:hover, .pagination .page li a:focus-visible {
@@ -6991,7 +6992,7 @@
   }
   *[class*=noticeInfo] {
     color: #00529b;
-    background-color: #ceecfa;
+    background-color: #c9e7e9;
   }
   *[class*=noticeInfo]:before {
     background: url(../images/basic/icon_info.svg) no-repeat center center;
@@ -7343,7 +7344,7 @@
   }
   .innerPage {
     position: relative;
-    background: linear-gradient(180deg, rgba(243, 241, 132, 0.8) 0%, rgba(234, 242, 132, 0.5) 150px, rgba(227, 243, 132, 0) 280px);
+    background: linear-gradient(180deg, rgba(243, 241, 132, 0.8) 0%, rgba(234, 242, 132, 0.5) 80px, rgba(227, 243, 132, 0) 150px);
     margin-top: 106px;
   }
   .innerPage::before {

@@ -119,9 +119,9 @@ table {
   th,
   td {
     width: 10em;
-    padding: 0.8em 0.5em;
+    padding: 0.8em 0;
     text-align: center;
-    line-height: 1.6em;
+    line-height: 1.2;
     @include screen('mobile') {
       display: inline-block;
       margin-right: -6px;
@@ -172,11 +172,11 @@ table {
       min-width: 600px;
     }
   }
-}
-.scrollTable {
-  min-width: 600px;
-  caption {
-    @include srOnly;
+  & > .tableScroll > table {
+    min-width: 600px;
+    caption {
+      @include srOnly;
+    }
   }
 }
 // .scrolTableWrapper {
@@ -262,11 +262,13 @@ table {
 //   }
 // }
 
-// scrolltable style
+// scrollTable style
 .tableWrapper {
-  overflow-x: scroll;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
+  & > div {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+  }
 }
 .scrollTableNav {
   width: 60px;
