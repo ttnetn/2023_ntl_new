@@ -8885,6 +8885,20 @@
   .cp table.flow .arrow img {
     width: 100%;
   }
+  .cp .more a {
+    text-decoration: none;
+    color: #333;
+  }
+  .cp .more a:hover, .cp .more a:focus-visible {
+    color: #02676c;
+    cursor: pointer;
+  }
+  .cp .more a:focus-visible {
+    outline: #d30000 2px dashed;
+  }
+  .cp .more a:hover {
+    color: #fff;
+  }
   .fileDownload {
     width: 100%;
     margin: 0 auto 2em;
@@ -9244,6 +9258,41 @@
   }
   .feedback .btnGrp {
     padding: 0;
+  }
+  .eventInfo {
+    padding: 0;
+  }
+  .eventInfo > li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    margin-bottom: 0.5em;
+  }
+  @media screen and (max-width: 767px) {
+    .eventInfo > li {
+      flex-wrap: wrap;
+    }
+  }
+  .eventInfo .listTitle {
+    flex: 0 0 150px;
+    margin-right: 10px;
+    font-weight: bold;
+    position: relative;
+    padding-left: 1em;
+  }
+  .eventInfo .listTitle::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 1em;
+    height: 1em;
+    background: url(../images/icon/icon_arrow_right_dark.svg) center no-repeat;
+    background-size: 12px;
+  }
+  .eventInfo .description > ul > li {
+    list-style-type: disc;
   }
   .totalAmount {
     border-radius: 4px;

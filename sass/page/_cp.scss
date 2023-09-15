@@ -110,6 +110,14 @@ h2.title {
       }
     }
   }
+  .more {
+    a {
+      @include aSetting($colorWord);
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
 }
 
 // 檔案下載
@@ -343,5 +351,41 @@ h2.title {
   }
   .btnGrp {
     padding: 0;
+  }
+}
+
+.eventInfo {
+  padding: 0;
+  > li {
+    @include liReset;
+    display: flex;
+    margin-bottom: 0.5em;
+    @include screen('mobile') {
+      flex-wrap: wrap;
+    }
+  }
+  .listTitle {
+    flex: 0 0 150px;
+    margin-right: 10px;
+    font-weight: bold;
+    position: relative;
+    padding-left: 1em;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 1em;
+      height: 1em;
+      background: url(../images/icon/icon_arrow_right_dark.svg) center no-repeat;
+      background-size: 12px;
+    }
+  }
+  .description {
+    > ul {
+      > li {
+        list-style-type: disc;
+      }
+    }
   }
 }
