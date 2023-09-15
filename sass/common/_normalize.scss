@@ -212,7 +212,7 @@ input[type='submit'] {
 }
 button[disabled],
 html input[disabled] {
-  cursor: default;
+  cursor: not-allowed;
 }
 button::-moz-focus-inner,
 input::-moz-focus-inner {

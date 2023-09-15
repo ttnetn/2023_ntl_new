@@ -159,15 +159,29 @@
 
 .disabled,
 [disabled] {
-  opacity: 0.5;
-  cursor: not-allowed;
+  background-color: $colorLightGray;
+  color: #555;
+  border-color: $colorLightGray;
+  cursor: not-allowed !important;
   text-shadow: none;
+  &:hover {
+    background-color: $colorLightGray;
+    color: #555;
+    border-color: $colorLightGray;
+  }
 }
 .readonly,
 [readonly] {
-  opacity: 0.5;
+  color: #555;
+  background-color: $colorGray;
+  border-color: $colorLightGray;
   cursor: not-allowed;
   text-shadow: none;
+  &:hover {
+    background-color: $colorLightGray;
+    color: #555;
+    border-color: $colorLightGray;
+  }
 }
 
 // 按鈕大小

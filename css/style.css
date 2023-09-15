@@ -171,7 +171,7 @@
   }
   button[disabled],
   html input[disabled] {
-    cursor: default;
+    cursor: not-allowed;
   }
   button::-moz-focus-inner,
   input::-moz-focus-inner {
@@ -2838,15 +2838,31 @@
   }
   .disabled,
   [disabled] {
-    opacity: 0.5;
-    cursor: not-allowed;
+    background-color: #ececec;
+    color: #555;
+    border-color: #ececec;
+    cursor: not-allowed !important;
     text-shadow: none;
+  }
+  .disabled:hover,
+  [disabled]:hover {
+    background-color: #ececec;
+    color: #555;
+    border-color: #ececec;
   }
   .readonly,
   [readonly] {
-    opacity: 0.5;
+    color: #555;
+    background-color: #ccc;
+    border-color: #ececec;
     cursor: not-allowed;
     text-shadow: none;
+  }
+  .readonly:hover,
+  [readonly]:hover {
+    background-color: #ececec;
+    color: #555;
+    border-color: #ececec;
   }
   .btnXl {
     font-size: 1.5em;
