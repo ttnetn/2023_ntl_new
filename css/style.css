@@ -4636,7 +4636,6 @@
     padding: 0.5em 0;
   }
   .flexForm {
-    font-size: 0.938rem;
     margin: 0.5em;
   }
   .flexForm .formGrp {
@@ -5442,18 +5441,6 @@
       flex-basis: calc(100% - 0.6em);
     }
   }
-  .flexForm .btnGrp {
-    justify-content: center;
-  }
-  .flexForm .btnGrp .btn,
-  .flexForm .btnGrp .btnReset,
-  .flexForm .btnGrp .btnSubmit,
-  .flexForm .btnGrp input[type=submit],
-  .flexForm .btnGrp input[type=reset],
-  .flexForm .btnGrp input[type=button],
-  .flexForm .btnGrp input[type=search] {
-    margin: 0.3em;
-  }
   .flexForm .btn,
   .flexForm input[type=submit],
   .flexForm input[type=reset],
@@ -5480,6 +5467,19 @@
     .flexForm .uploadGrp {
       flex-wrap: wrap;
     }
+  }
+  .flexForm .btnGrp {
+    justify-content: center;
+    padding: 1em 0;
+  }
+  .flexForm .btnGrp .btn,
+  .flexForm .btnGrp .btnReset,
+  .flexForm .btnGrp .btnSubmit,
+  .flexForm .btnGrp input[type=submit],
+  .flexForm .btnGrp input[type=reset],
+  .flexForm .btnGrp input[type=button],
+  .flexForm .btnGrp input[type=search] {
+    margin: 0.3em;
   }
   .flexForm .checkGrp label,
   .flexForm .radioGrp label {
@@ -7042,7 +7042,7 @@
     font-size: 1rem;
   }
   *[class^=notice].typeB:before {
-    top: 1.4em;
+    top: 1.9em;
   }
   *[class^=notice] a {
     color: #02696e;
