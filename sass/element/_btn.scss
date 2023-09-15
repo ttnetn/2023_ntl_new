@@ -157,30 +157,34 @@
   }
 }
 
-.disabled,
-[disabled] {
-  background-color: $colorLightGray;
-  color: #555;
-  border-color: $colorLightGray;
-  cursor: not-allowed !important;
-  text-shadow: none;
-  &:hover {
+.btn,
+button[type='button'],
+button[type='submit'],
+input[type='button'],
+input[type='submit'] {
+  &.disabled,
+  &[disabled] {
     background-color: $colorLightGray;
     color: #555;
     border-color: $colorLightGray;
+    cursor: not-allowed !important;
+    text-shadow: none;
+    &:hover {
+      background-color: $colorLightGray;
+      color: #555;
+      border-color: $colorLightGray;
+    }
   }
 }
 .readonly,
 [readonly] {
-  color: #555;
-  background-color: $colorGray;
-  border-color: $colorLightGray;
+  opacity: 0.5;
   cursor: not-allowed;
   text-shadow: none;
   &:hover {
-    background-color: $colorLightGray;
+    //background-color: $colorLightGray;
     color: #555;
-    border-color: $colorLightGray;
+    //border-color: $colorLightGray;
   }
 }
 

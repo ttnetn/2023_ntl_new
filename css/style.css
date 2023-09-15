@@ -2836,33 +2836,43 @@
     background: #025155;
     border: 1px solid #ddd;
   }
-  .disabled,
-  [disabled] {
+  .btn.disabled, .btn[disabled],
+  button[type=button].disabled,
+  button[type=button][disabled],
+  button[type=submit].disabled,
+  button[type=submit][disabled],
+  input[type=button].disabled,
+  input[type=button][disabled],
+  input[type=submit].disabled,
+  input[type=submit][disabled] {
     background-color: #ececec;
     color: #555;
     border-color: #ececec;
     cursor: not-allowed !important;
     text-shadow: none;
   }
-  .disabled:hover,
-  [disabled]:hover {
+  .btn.disabled:hover, .btn[disabled]:hover,
+  button[type=button].disabled:hover,
+  button[type=button][disabled]:hover,
+  button[type=submit].disabled:hover,
+  button[type=submit][disabled]:hover,
+  input[type=button].disabled:hover,
+  input[type=button][disabled]:hover,
+  input[type=submit].disabled:hover,
+  input[type=submit][disabled]:hover {
     background-color: #ececec;
     color: #555;
     border-color: #ececec;
   }
   .readonly,
   [readonly] {
-    color: #555;
-    background-color: #ccc;
-    border-color: #ececec;
+    opacity: 0.5;
     cursor: not-allowed;
     text-shadow: none;
   }
   .readonly:hover,
   [readonly]:hover {
-    background-color: #ececec;
     color: #555;
-    border-color: #ececec;
   }
   .btnXl {
     font-size: 1.5em;
@@ -5576,6 +5586,9 @@
     margin: 0.3em;
     padding: 0.45em 1em;
   }
+  .formTitle {
+    font-weight: bold;
+  }
   label,
   legend {
     display: inline-block;
@@ -7003,7 +7016,7 @@
     font-size: 0.938em;
     margin: 0 0 1em 0;
     position: relative;
-    color: #666;
+    color: #555;
     background-color: #f2f2f2;
     position: relative;
     box-sizing: border-box;
@@ -7025,7 +7038,8 @@
     width: 100%;
   }
   *[class^=notice].typeB {
-    padding: 1em 2.5em;
+    padding: 1.5em 2.5em;
+    font-size: 1rem;
   }
   *[class^=notice].typeB:before {
     top: 1.4em;

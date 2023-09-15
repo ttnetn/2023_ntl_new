@@ -6,7 +6,7 @@
   font-size: 0.938em;
   margin: 0 0 1em 0;
   position: relative;
-  color: #666;
+  color: #555;
   background-color: #f2f2f2;
   position: relative;
   box-sizing: border-box;
@@ -27,7 +27,8 @@
     }
   }
   &.typeB {
-    padding: 1em 2.5em;
+    padding: 1.5em 2.5em;
+    font-size: 1rem;
     &:before {
       top: 1.4em;
     }
