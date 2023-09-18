@@ -8415,30 +8415,39 @@
   }
   .calendar .dateSelect {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    font-size: 1.125em;
+    position: relative;
+    margin-bottom: 5px;
+    font-weight: bold;
   }
-  .calendar .selectGrp {
-    display: flex;
-    align-items: center;
+  .calendar .dateSelect span {
+    display: inline-block;
+    margin-right: 5px;
   }
-  .calendar .selectGrp button {
+  .calendar .dateSelect .prev,
+  .calendar .dateSelect .next {
     font-size: 0;
     width: 40px;
     height: 40px;
     border: none;
     opacity: 0.7;
+    position: absolute;
   }
-  .calendar .selectGrp button:hover {
+  .calendar .dateSelect .prev:hover,
+  .calendar .dateSelect .next:hover {
     opacity: 1;
   }
-  .calendar .selectGrp .prev {
+  .calendar .dateSelect .prev {
     background: url(../images/icon/icon_arrow_left_dark.svg) center no-repeat;
     background-size: 1rem;
+    left: 0;
   }
-  .calendar .selectGrp .next {
+  .calendar .dateSelect .next {
     background: url(../images/icon/icon_arrow_right_dark.svg) center no-repeat;
     background-size: 1rem;
+    right: 0;
   }
   .calendar table {
     width: 320px;
