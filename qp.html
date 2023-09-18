@@ -235,51 +235,21 @@
             </div>
           </div>
           <!-- h2節點 -->
-          <h2 class="title">出版品訂購項目</h2>
-          <section class="sp">
-            <div class="tableList orderList">
-              <table class="tableHover">
-                <thead>
-                  <tr>
-                    <th>縮圖</th>
-                    <th>出版品名稱</th>
-                    <th>定價</th>
-                    <th>優惠價</th>
-                    <th>數量</th>
-                    <th>金額</th>
-                    <th>取消</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <a href="images/product01.jpg" data-fancybox="images" data-caption="第1張圖說" data-alt="第1張圖說"> <img src="images/product01.jpg" alt="" /></a>
-                    </td>
-                    <td>台灣山岳寫真筆記本</td>
-                    <td>150</td>
-                    <td>135</td>
-                    <td>
-                      <input type="text" id="" name="" title="" value="1" />
-                    </td>
-                    <td>135</td>
-                    <td>
-                      <button type="button" class="btn btnRemove">刪除</button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="totalAmount">共<span>1</span>件，總計NT<span>270</span>元 (運費另計)</div>
-          </section>
-          <h2 class="title">訂購人資料</h2>
+          <h2 class="title">訂單進度查詢</h2>
           <section class="">
             <p>此符號<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>為必填欄位</p>
             <div class="flexForm formGrid">
               <div class="formGrp">
-                <label for="" aria-required="true" class="formTitle">姓名<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                <label for="" aria-required="true" class="formTitle">訂購姓名<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
                 <div class="formContent">
-                  <input name="" type="text" value="" title="請輸入姓名" placeholder="請輸入姓名" />
+                  <input name="" type="text" value="" title="請輸入訂購姓名" placeholder="請輸入訂購姓名" />
                   <div class="noticeWarning">此為必填欄位</div>
+                </div>
+              </div>
+              <div class="formGrp">
+                <label for="phone" class="formTitle" aria-required="true">訂購電話</label>
+                <div class="formContent">
+                  <input name="phone" id="phone" type="tel" title="請輸入訂購電話" placeholder="請輸入訂購電話" />
                 </div>
               </div>
               <div class="formGrp">
@@ -294,49 +264,12 @@
                 </div>
               </div>
               <div class="formGrp">
-                <label for="phone" class="formTitle" aria-required="true">聯絡電話<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-                <div class="formContent">
-                  <input name="phone" id="phone" type="tel" title="請輸入電話" placeholder="請輸入電話" />
-                </div>
-              </div>
-              <div class="formGrp">
-                <label for="" class="formTitle" aria-required="true">聯絡地址<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-                <div class="formContent">
-                  <input name="" type="text" value="" title="請輸入聯絡地址" placeholder="請輸入聯絡地址" />
-                </div>
-              </div>
-              <div class="formGrp">
-                <label for="" aria-required="true" class="formTitle"
-                  >意見內容
-                  <abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
-                </label>
-                <div class="formContent">
-                  <textarea placeholder="請輸入意見內容" id="" name="" rows="12" cols="40" title="請輸入意見內容">
-※ 如有特殊需求請於訂單備註欄位填寫。
-※ 請注意!本館保留接受訂單與否的權利，實際定價與出貨量以本館人員資訊為主。
-※ 網站完成訂購流程後，請至您輸入的電子信箱收取訂購確認單信，確認訂單明細後，請立即點選下方確認訂購鈕，完成確認訂單，接下來會有專人與您聯絡後續付款方式與運費計算、寄送服務流程。
-※ 商品加入訂購流程但未結帳前，並無保留出版品與創意商品庫存功能，商品庫存分配將以結帳順序為準。
-※ 付款完成，本館核對到帳款確認無誤，才能安排出貨。
-※ 如遇商品數量不足或無法於指定到貨日送達將另行通知。
-                  </textarea>
-                  <div class="checkGrp">
-                    <label for=""> <input id="" name="" type="checkbox" /> 我已完全閱讀並同意以上內容 </label>
-                  </div>
-                </div>
-              </div>
-
-              <div class="formGrp">
                 <div class="formTitle">驗證碼<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></div>
-                <div class="formContent formInline">
-                  <img src="images/basic/captcha.gif" alt="" class="captcha" />
-                  <input name="" type="text" value="" title="請輸入驗證碼" />
-                  <button type="button" class="btn"><i class="i_reflash_dark" aria-hidden="true" focusable="false"></i>重新整理</button>
-                  <button type="button" class="btn"><i class="i_play_dark" aria-hidden="true" focusable="false"></i>語音播放</button>
-                </div>
+                <div class="formContent formInline"></div>
               </div>
               <div class="btnGrp formInline">
-                <button type="button" class="btn btnReset">清除重填</button>
-                <button type="submit" class="btn btnSubmit">確定送出</button>
+                <button type="button" class="btn btnReset">回上一頁</button>
+                <button type="submit" class="btn btnSubmit">查詢</button>
               </div>
             </div>
           </section>
