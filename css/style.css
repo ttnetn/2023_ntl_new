@@ -5705,7 +5705,7 @@
     box-sizing: border-box;
     border-radius: 0.2em;
     transition: all 0.3s ease-out;
-    height: 5em;
+    height: 8em;
     overflow-y: scroll;
   }
   @media screen and (max-width: 575px) {
