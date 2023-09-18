@@ -224,7 +224,7 @@
             </ul>
           </nav>
           <!-- h2節點 -->
-          <h2 class="title">民意信箱</h2>
+          <h2 class="title">意見回報</h2>
           <!-- functionPanel -->
           <div class="functionPanel">
             <!-- function功能區塊 -->
@@ -237,14 +237,28 @@
             </div>
           </div>
           <section class="">
-            <p>（非讀者意見恕不予受理）</p>
             <p>此符號<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>為必填欄位</p>
             <div class="flexForm formGrid">
               <div class="formGrp">
-                <label for="" aria-required="true" class="formTitle">姓名<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                <label aria-required="true" class="formTitle">主旨<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                <div class="formContent">
+                  <input name="" type="text" value="" title="請輸入主旨" placeholder="請輸入主旨" />
+                  <div class="noticeWarning">此為必填欄位</div>
+                </div>
+              </div>
+              <div class="formGrp">
+                <label for="" class="formTitle"
+                  >內容
+                  <abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                </label>
+                <div class="formContent">
+                  <textarea placeholder="請輸入內容" id="" name="" rows="8" cols="40" title="請輸入內容"></textarea>
+                </div>
+              </div>
+              <div class="formGrp">
+                <label aria-required="true" class="formTitle">姓名<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
                 <div class="formContent">
                   <input name="" type="text" value="" title="請輸入姓名" placeholder="請輸入姓名" />
-                  <div class="noticeWarning">此為必填欄位</div>
                 </div>
               </div>
               <div class="formGrp">
@@ -259,31 +273,8 @@
                 </div>
               </div>
               <div class="formGrp">
-                <label for="phone" class="formTitle" aria-required="true">聯絡電話<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-                <div class="formContent">
-                  <input name="phone" id="phone" type="tel" title="請輸入電話" placeholder="請輸入電話" />
-                </div>
-              </div>
-              <div class="formGrp">
-                <label class="formTitle">聯絡地址</label>
-                <div class="formContent">
-                  <input name="" type="text" value="" title="請輸入聯絡地址" placeholder="請輸入聯絡地址" />
-                </div>
-              </div>
-              <div class="formGrp">
-                <label for="" aria-required="true" class="formTitle">意見標題<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-                <div class="formContent">
-                  <input name="" type="text" value="" title="請輸入意見標題" placeholder="請輸入意見標題" />
-                </div>
-              </div>
-              <div class="formGrp">
-                <label for="" aria-required="true" class="formTitle"
-                  >意見內容
-                  <abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
-                </label>
-                <div class="formContent">
-                  <textarea placeholder="請輸入意見內容" id="" name="" rows="8" cols="40" title="請輸入意見內容"></textarea>
-                </div>
+                <label class="formTitle">資料來源</label>
+                <div class="formContent">地名說了相遇故事特展</div>
               </div>
               <div class="formGrp">
                 <label for="" class="formTitle">單檔上傳</label>
