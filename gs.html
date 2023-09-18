@@ -224,9 +224,10 @@
             </ul>
           </nav>
           <!-- h2節點 -->
-          <h2 class="title">意見回報</h2>
+          <h2 class="title">節點標題</h2>
           <!-- functionPanel -->
           <div class="functionPanel">
+            <div class="publishTime"><span>發布日期：</span><time>2019-01-01</time></div>
             <!-- function功能區塊 -->
             <div class="function">
               <ul>
@@ -236,74 +237,39 @@
               </ul>
             </div>
           </div>
-          <section class="">
-            <p>此符號<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>為必填欄位</p>
-            <div class="flexForm formGrid">
-              <div class="formGrp">
-                <label aria-required="true" class="formTitle">主旨<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-                <div class="formContent">
-                  <input name="" type="text" value="" title="請輸入主旨" placeholder="請輸入主旨" />
-                  <div class="noticeWarning">此為必填欄位</div>
-                </div>
-              </div>
-              <div class="formGrp">
-                <label for="" class="formTitle"
-                  >內容
-                  <abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
-                </label>
-                <div class="formContent">
-                  <textarea placeholder="請輸入內容" id="" name="" rows="8" cols="40" title="請輸入內容"></textarea>
-                </div>
-              </div>
-              <div class="formGrp">
-                <label aria-required="true" class="formTitle">姓名<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-                <div class="formContent">
-                  <input name="" type="text" value="" title="請輸入姓名" placeholder="請輸入姓名" />
-                </div>
-              </div>
-              <div class="formGrp">
-                <label for="email" class="formTitle" aria-required="true">電子郵件<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-                <div class="formContent">
-                  <input name="email" type="email" id="email" title="請輸入E-mail" placeholder="請輸入E-mail" />
-                  <div class="notice">這是一般提醒訊息區塊</div>
-                  <div class="noticeWarning">
-                    這似乎不是一個正常的Email格式
-                    <a role="button" href="#" aria-label="關閉" class="close"><img src="images/basic/icon_close.svg" alt="" /></a>
-                  </div>
-                </div>
-              </div>
-              <div class="formGrp">
-                <label class="formTitle">資料來源</label>
-                <div class="formContent">地名說了相遇故事特展</div>
-              </div>
-              <div class="formGrp">
-                <label for="" class="formTitle">單檔上傳</label>
-                <div class="formContent">
-                  <div class="uploadGrp">
-                    <input class="upload_file" type="text" title="檔案名稱" readonly="" />
-                    <div class="uploadBtn">
-                      <span>上傳檔案</span>
-                      <input type="file" class="check_file" title="請選擇檔案" />
-                    </div>
-                    <div class="notice">說明：可上傳的檔案類型限（DOC、DOCX、XLS、XLSX、PPT、PPTX、PDF、JPG、GIF、BMP、PNG、TIFF、ZIP、RAR、TXT、RTF），如果有多個檔案請壓縮後再上傳，檔案總大小不可超過10MB。</div>
-                  </div>
-                </div>
-              </div>
-              <div class="formGrp">
-                <div class="formTitle">驗證碼<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></div>
-                <div class="formContent formInline">
-                  <img src="images/basic/captcha.gif" alt="" class="captcha" />
-                  <input name="" type="text" value="" title="請輸入驗證碼" />
-                  <button type="button" class="btn"><i class="i_reflash_dark" aria-hidden="true" focusable="false"></i>重新整理</button>
-                  <button type="button" class="btn"><i class="i_play_dark" aria-hidden="true" focusable="false"></i>語音播放</button>
-                </div>
-              </div>
-              <div class="btnGrp formInline">
-                <button type="button" class="btn btnReset">清除重填</button>
-                <button type="button" class="btn btnSubmit">確定送出</button>
-              </div>
+          <!-- SP Start -->
+          <section class="sp">
+            <div id="gsresult">
+              <script>
+                function gcseCallback() {
+                  //if (document.readyState != 'complete')
+                  //    return google.setOnLoadCallback(gcseCallback, true);
+                  google.search.cse.element.render({
+                    gname: 'gsearch',
+                    div: 'gsresult',
+                    tag: 'search',
+                    attributes: { as_sitesearch: '' },
+                  });
+                  var element = google.search.cse.element.getElement('gsearch');
+                  element.execute('法官');
+                }
+                window.__gcse = {
+                  parsetags: 'explicit',
+                  callback: gcseCallback,
+                };
+                (function () {
+                  var cx = 'bbfb6b718fa6fa6f6';
+                  var gcse = document.createElement('script');
+                  gcse.type = 'text/javascript';
+                  gcse.async = true;
+                  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                  var s = document.getElementsByTagName('script')[0];
+                  s.parentNode.insertBefore(gcse, s);
+                })();
+              </script>
             </div>
           </section>
+          <!-- sP End -->
           <div class="function">
             <ul>
               <li class="back">
