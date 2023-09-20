@@ -80,6 +80,9 @@
         background-color: #eee;
         color: #333;
         text-align: center;
+        font-size: 1rem;
+        font-weight: bold;
+        box-sizing: border-box;
       }
       &.otherMonth {
         .numDate {
@@ -91,9 +94,6 @@
       }
     }
     .numDate {
-      // position: absolute;
-      // top: 0px;
-
       text-align: center;
       color: #7a7a7a;
       font-size: 1.125rem;
@@ -107,6 +107,7 @@
         left: 0;
         top: 30px;
         width: 15%;
+        border: none;
       }
     }
   }
@@ -156,6 +157,9 @@
   background: #fff url(../images/paperbg01.png);
   padding: 1em 2em;
   margin-bottom: 1em;
+  @include screen('mobile') {
+    padding: 1em 15px;
+  }
   .dateSelect {
     font-size: 1.5rem;
     margin-bottom: 1em;
@@ -178,4 +182,35 @@
       }
     }
   }
+}
+
+.modal {
+  border-radius: 10px;
+  .modalTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+}
+.listModal {
+  .applyList {
+    @include liReset;
+    li {
+      display: flex;
+      padding: 0.8em 0;
+      border-bottom: 1px dashed $colorGray;
+      &:first-of-type {
+        border-top: 1px dashed $colorGray;
+      }
+      span {
+        display: block;
+        margin: 0 1em;
+      }
+    }
+  }
+}
+
+.applyModal {
+  width: 800px;
+  max-width: 98%;
 }

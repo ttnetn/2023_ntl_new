@@ -2908,7 +2908,7 @@
   }
   .readonly,
   [readonly] {
-    opacity: 0.5;
+    opacity: 0.7;
     cursor: not-allowed;
     text-shadow: none;
   }
@@ -6003,7 +6003,7 @@
   table.tableSprite tr:nth-child(even) {
     background: #f5f5f5;
   }
-  @media screen and (max-width: 575px) {
+  @media screen and (max-width: 767px) {
     .tableList {
       background-color: transparent;
     }
@@ -9489,6 +9489,9 @@
     background-color: #eee;
     color: #333;
     text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    box-sizing: border-box;
   }
   .calendarTB table td.otherMonth .numDate {
     color: #d5d5d5;
@@ -9514,6 +9517,7 @@
       left: 0;
       top: 30px;
       width: 15%;
+      border: none;
     }
   }
   .calendarTB .periodContent {
@@ -9560,6 +9564,11 @@
     padding: 1em 2em;
     margin-bottom: 1em;
   }
+  @media screen and (max-width: 767px) {
+    .serviceApply {
+      padding: 1em 15px;
+    }
+  }
   .serviceApply .dateSelect {
     font-size: 1.5rem;
     margin-bottom: 1em;
@@ -9579,6 +9588,35 @@
   .serviceApply .dateSelect .dateRange span {
     color: #d30000;
     font-family: "Century Gothic";
+  }
+  .modal {
+    border-radius: 10px;
+  }
+  .modal .modalTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+  .listModal .applyList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .listModal .applyList li {
+    display: flex;
+    padding: 0.8em 0;
+    border-bottom: 1px dashed #ccc;
+  }
+  .listModal .applyList li:first-of-type {
+    border-top: 1px dashed #ccc;
+  }
+  .listModal .applyList li span {
+    display: block;
+    margin: 0 1em;
+  }
+  .applyModal {
+    width: 800px;
+    max-width: 98%;
   }
 }
 .colorA a:hover {

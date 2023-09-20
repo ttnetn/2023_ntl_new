@@ -52,7 +52,7 @@ table {
   }
 }
 .tableList {
-  @include screen('xsMobile') {
+  @include screen('mobile') {
     background-color: transparent; //Force table to not be like tables anymore
     thead,
     tbody,
