@@ -1691,6 +1691,11 @@ function accordionFunction(obj) {
     let display = window.getComputedStyle(content).display;
     content.style.display = display;
 
+    // if (item.parentNode.classList.contains('active')) {
+    //   item.querySelector('.accordionState').innerHTML = `${close}`;
+    //   item.setAttribute('aria-expanded', 'true');
+    // }
+
     if (display === 'none') {
       display = 'block';
       item.parentNode.classList.add('active');
@@ -1701,7 +1706,7 @@ function accordionFunction(obj) {
       content.style.transitionProperty = 'height';
       content.style.transitionDuration = `${duration}ms`;
       content.scrollHeight;
-      item.querySelector('.accordionState').innerHTML = `${close}`;
+      ///item.querySelector('.accordionState').innerHTML = `${close}`;
       content.style.height = `${contentHeight}px`;
       setTimeout(() => {
         content.style.removeProperty('height');
@@ -1715,7 +1720,7 @@ function accordionFunction(obj) {
       content.style.transitionDuration = `${duration}ms`;
       content.scrollHeight;
       content.style.height = '0';
-      item.querySelector('.accordionState').innerHTML = `${open}`;
+      //item.querySelector('.accordionState').innerHTML = `${open}`;
       item.parentNode.classList.remove('active');
       item.setAttribute('aria-expanded', 'false');
       setTimeout(() => {

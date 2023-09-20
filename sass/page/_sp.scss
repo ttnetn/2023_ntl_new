@@ -13,3 +13,169 @@
     color: $colorRed;
   }
 }
+
+// 日曆calendar_Tb
+.calendarTB {
+  margin: 0 0 20px;
+  table {
+    word-break: break-all;
+    table-layout: fixed;
+    thead {
+      margin-bottom: 5px;
+    }
+    tbody {
+      border-top: 1px solid #ccc;
+    }
+    tr {
+      background-color: #fff;
+    }
+    tr:hover {
+      background-color: #fffbec;
+      transition: 0.2s;
+    }
+    th {
+      background-color: #ddd !important;
+      border: 1px solid #f8f3e4;
+      border-bottom: 5px solid #f8f3e4;
+      color: #333;
+      padding: 0.5em 1em;
+      width: 14.28%;
+      font-size: 1.25rem;
+      font-weight: 400;
+      text-align: center;
+      &.weekend {
+        background-color: $colorLight !important;
+      }
+    }
+    td {
+      position: relative;
+      // min-height: 130px!important;
+      // background-color: #fff !important;
+      border: 1px solid #e5e5e5;
+      padding: 2px;
+      @include screen('mobile') {
+        min-height: 65px;
+        padding: 2px 7px 2px 17% !important;
+      }
+      &:after {
+        content: '';
+        width: 1px;
+        height: 20px;
+        float: left;
+        background-color: #fff;
+        border: none;
+        @include screen('mobile') {
+          float: none;
+          height: auto;
+          background-color: red;
+        }
+      }
+      &:before {
+        position: absolute;
+        width: 15%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        padding: 5px;
+        background-color: #eee;
+        color: #333;
+        text-align: center;
+      }
+      &.otherMonth {
+        .numDate {
+          color: #d5d5d5;
+        }
+        @include screen('mobile') {
+          display: none;
+        }
+      }
+    }
+    .numDate {
+      // position: absolute;
+      // top: 0px;
+
+      text-align: center;
+      color: #7a7a7a;
+      font-size: 1.125rem;
+      font-weight: bolder;
+      width: 100%;
+      border-bottom: 1px dotted $colorGray;
+      @include screen('mobile') {
+        position: absolute;
+        text-align: center;
+        right: 0;
+        left: 0;
+        top: 30px;
+        width: 15%;
+      }
+    }
+  }
+
+  .periodContent {
+    margin: 5px 0 0;
+    text-align: center;
+    .applyPeriod {
+      background: $colorSecondary;
+      padding: 0.5em;
+      letter-spacing: 0.5px;
+      border-radius: 4px;
+      margin-bottom: 5px;
+      &.disabled {
+        background-color: $colorLightGray;
+      }
+      span {
+        display: block;
+      }
+      .time {
+        border-bottom: 1px dotted #fff;
+      }
+      .quota {
+        font-size: rem(15);
+        color: #555;
+        em {
+          font-style: normal;
+          padding: 0 3px;
+          color: $colorRed;
+          font-weight: bold;
+        }
+      }
+      .btnGrp {
+        padding: 0;
+        margin-top: 5px;
+        justify-content: center;
+      }
+      .btn {
+        padding: 0.25em;
+        font-size: rem(15);
+      }
+    }
+  }
+}
+
+.serviceApply {
+  background: #fff url(../images/paperbg01.png);
+  padding: 1em 2em;
+  margin-bottom: 1em;
+  .dateSelect {
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+    .prev,
+    .next {
+      position: relative;
+    }
+    .dateRange {
+      margin: 0 10px;
+      & + .dateRange {
+        &::before {
+          content: '-';
+          display: inline-block;
+          margin-right: 20px;
+        }
+      }
+      span {
+        color: $colorRed;
+        font-family: 'Century Gothic';
+      }
+    }
+  }
+}

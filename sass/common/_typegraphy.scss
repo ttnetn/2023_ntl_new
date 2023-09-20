@@ -1,6 +1,7 @@
 // for CP page content setting only
 
-.cp {
+.cp,
+.sp {
   font-size: 1em * 1.0666666;
   line-height: 1.65em;
   @include screen('xsMobile') {
@@ -19,7 +20,7 @@
   h4 {
     font-size: 1.25em;
     margin-top: 0;
-    margin-bottom: 1em;
+    margin: 0.5em 0;
   }
   h5 {
     font-size: 1.125em;

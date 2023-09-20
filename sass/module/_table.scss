@@ -28,6 +28,7 @@ table {
   td {
     border: #ddd 1px solid;
     word-break: break-all;
+    vertical-align: top;
     a {
       word-break: break-all;
     }
@@ -36,7 +37,7 @@ table {
     background-color: #f3f3f3;
     color: #333;
     border: #ddd 1px solid;
-    text-align: center;
+    //text-align: center;
     white-space: nowrap;
   }
   &.tableHover {
@@ -180,88 +181,6 @@ table {
     }
   }
 }
-// .scrolTableWrapper {
-//   position: relative;
-//   -webkit-overflow-scrolling: touch;
-//   // -webkit-transform: translate3d(0, 0, 0);
-//   overflow-y: hidden;
-// }
-// .scrolTableContainer {
-//   overflow: auto;
-// }
-// .scrolTableNav {
-//   display: none;
-//   position: absolute;
-//   width: 60px;
-//   height: 100%;
-//   cursor: pointer;
-//   z-index: 9;
-// }
-// .scrolTableNav.scrolTableNavLeft {
-//   left: 0;
-//   @include gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0), horizontal);
-//   .tableArrowLeft {
-//     position: fixed;
-//     left: 0em;
-//     top: 0em;
-//     display: none;
-//     z-index: 9;
-//     @include screen('mobile') {
-//       display: block;
-//     }
-//     &:before {
-//       position: absolute;
-//       top: 0em;
-//       left: -0.2em;
-//       width: 30px;
-//       height: 30px;
-//       background: url(../vendor/scrolltable/images/arrow-left.png) no-repeat 10px center;
-//       content: '';
-//       z-index: 2;
-//       // animation: arrowLeft .3s linear infinite alternate;
-//     }
-//   }
-// }
-// .scrolTableNav.scrolTableNavRight {
-//   right: 0;
-//   @include gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), horizontal);
-//   .tableArrowRight {
-//     position: fixed;
-//     top: 0em;
-//     right: 0em;
-//     display: none;
-//     z-index: 9;
-//     @include screen('mobile') {
-//       display: block;
-//     }
-//     &:before {
-//       position: absolute;
-//       top: 0em;
-//       right: -0.2em;
-//       width: 30px;
-//       height: 30px;
-//       background: url(../vendor/scrolltable/images/arrow-right.png) no-repeat right 10px center;
-//       content: '';
-//       z-index: 2;
-//     }
-//   }
-// }
-// @keyframes arrowLeft {
-//   from {
-//     left: -0.2em;
-//   }
-//   to {
-//     left: 0.3em;
-//   }
-// }
-// @keyframes arrowRight {
-//   from {
-//     right: -0.2em;
-//   }
-//   to {
-//     right: 0.3em;
-//   }
-// }
 
 .orderList {
   margin: 1em 0;
@@ -328,4 +247,12 @@ table {
   height: 100%;
   background: url(../images/basic/icon_ar.svg) no-repeat center;
   cursor: pointer;
+}
+
+.tableTypeB {
+  table {
+    th {
+      font-weight: normal;
+    }
+  }
 }

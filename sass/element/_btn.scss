@@ -82,10 +82,10 @@
 //   // @extend %btn;
 //   @include btnSetting(lighten($colorYellow, 5), #333);
 // }
-// .btnOrange {
-//   // @extend %btn;
-//   @include btnSetting(lighten($colorOrange, 0), #fff);
-// }
+.btnOrange {
+  // @extend %btn;
+  @include btnSetting(lighten($colorOrange, 0), #fff);
+}
 // .btnRed {
 //   // @extend %btn;
 //   @include btnSetting($colorRed, #fff);

@@ -5,20 +5,33 @@
     li {
       margin-bottom: 0.5em;
       .accordionList {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         width: 100%;
         border: none;
         border-radius: 0;
-        display: block;
         text-align: left;
-        background-color: #21baff;
+        background-color: $colorLightGray;
         color: #fff;
         text-decoration: none;
         padding: 5px 50px 5px 20px;
         position: relative;
+
+        h3,
+        h4 {
+          margin: 0.5em 0;
+          color: $colorWord;
+        }
       }
-      &.active .accordionArrow {
-        top: calc(50% - 2px);
-        transform: rotate(225deg);
+      &.active {
+        .accordionArrow {
+          top: calc(50% - 2px);
+          transform: rotate(225deg);
+        }
+        .accordionContent {
+          display: block;
+        }
       }
     }
   }
@@ -27,8 +40,12 @@
     transition: height 0.3s linear;
     overflow: hidden;
     display: none;
+    padding: 1em;
+    // @include screen('mobile') {
+    //   padding: 1em 0;
+    // }
     .content {
-      padding: 10px;
+      white-space: nowrap;
     }
   }
   .accordionState {
@@ -42,7 +59,7 @@
     transform-origin: center center;
     &:after {
       content: '';
-      border: 2px solid #fff;
+      border: 2px solid #333;
       border-top: none;
       border-left: none;
       display: block;

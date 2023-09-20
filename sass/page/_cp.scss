@@ -11,7 +11,6 @@ h2.title {
   .pic {
     float: left;
     margin: 0px 1em 1em 0;
-    width: auto;
     width: 45%;
     max-width: 400px;
     background: #f1f1f1;
@@ -34,6 +33,27 @@ h2.title {
       width: auto;
       margin: 0px auto;
       display: block;
+      margin-bottom: 0.5em;
+    }
+  }
+  .picfull {
+    margin: 0px 1em 1em 0;
+    width: auto;
+    max-width: 100%;
+    background: #f1f1f1;
+    overflow: hidden;
+    padding: 0.5em 0.5em 0.2em;
+    img {
+      width: 100%;
+      margin: 0;
+      display: block;
+    }
+    span {
+      text-align: center;
+      display: block;
+      font-size: 0.938em;
+    }
+    @include screen('mobile') {
       margin-bottom: 0.5em;
     }
   }
@@ -172,7 +192,7 @@ h2.title {
         }
       }
     }
-    $fileType: doc, docx, odt, xls, xlsx, csv, ods, ppt, pptx, odp, zip, txt, mov, mp3, jpg, wmv, mp4, pdf, other;
+    $fileType: doc, docx, odt, odf, xls, xlsx, csv, ods, ppt, pptx, odp, zip, txt, mov, mp3, jpg, wmv, mp4, pdf, other;
     //notice 保留file_比較清楚知道是對應什麼
     @each $fileType in $fileType {
       span.file_#{$fileType} {
@@ -194,7 +214,8 @@ h2.title {
       align-items: center;
       &.file_doc,
       &.file_docx,
-      &.file_odt {
+      &.file_odt,
+      &.file_odf {
         a {
           background: #275cb7;
           &:hover,

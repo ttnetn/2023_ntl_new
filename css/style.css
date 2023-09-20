@@ -1850,60 +1850,77 @@
       max-width: calc(100% / 12 * 8 - 4px);
     }
   }
-  .cp {
+  .cp,
+  .sp {
     font-size: 1.0666666em;
     line-height: 1.65em;
   }
   @media screen and (max-width: 575px) {
-    .cp {
+    .cp,
+    .sp {
       font-size: 1.2em;
     }
   }
-  .cp h1 {
+  .cp h1,
+  .sp h1 {
     font-size: 2em;
   }
-  .cp h2 {
+  .cp h2,
+  .sp h2 {
     font-size: 1.75em;
     margin-bottom: 1.25em;
   }
-  .cp h3 {
+  .cp h3,
+  .sp h3 {
     font-size: 1.5em;
   }
-  .cp h4 {
+  .cp h4,
+  .sp h4 {
     font-size: 1.25em;
     margin-top: 0;
-    margin-bottom: 1em;
+    margin: 0.5em 0;
   }
-  .cp h5 {
+  .cp h5,
+  .sp h5 {
     font-size: 1.125em;
     margin-top: 0;
     margin-bottom: 1em;
   }
-  .cp h6 {
+  .cp h6,
+  .sp h6 {
     font-size: 1.125em;
     margin-top: 0;
     margin-bottom: 1em;
   }
-  .cp p {
+  .cp p,
+  .sp p {
     font-size: 1em;
     line-height: 1.85em;
     margin-top: 0;
   }
   .cp ul,
-  .cp ol {
+  .cp ol,
+  .sp ul,
+  .sp ol {
     font-size: 1em;
     margin-bottom: 1em;
   }
   .cp ul li,
-  .cp ol li {
+  .cp ol li,
+  .sp ul li,
+  .sp ol li {
     margin-bottom: 0.5em;
   }
   .cp dd,
   .cp th,
-  .cp td figure {
+  .cp td figure,
+  .sp dd,
+  .sp th,
+  .sp td figure {
     font-size: 1em;
   }
-  .cp blockquote {
+  .cp blockquote,
+  .sp blockquote {
     background: #f1f1f1;
     font-style: normal;
     display: block;
@@ -1913,11 +1930,13 @@
     box-sizing: border-box;
     margin: 0 0em 2em;
   }
-  .cp img {
+  .cp img,
+  .sp img {
     max-width: 100%;
   }
   @media screen and (max-width: 767px) {
-    .cp img {
+    .cp img,
+    .sp img {
       max-width: 100%;
       width: auto;
       clear: both;
@@ -2746,6 +2765,29 @@
   .btn:hover, .btn:focus-visible {
     color: #222;
     outline: none;
+  }
+  .btnOrange {
+    background: #ff7a00;
+    border: 1px solid #ff7a00;
+    color: #fff;
+  }
+  .btnOrange:hover {
+    background: #cc6200;
+    border: 1px solid #994900;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+  }
+  .btnOrange:focus-visible {
+    background: #cc6200;
+    border: 1px solid #994900;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+  }
+  .btnOrange.active {
+    background: #ff871a;
+    cursor: pointer;
   }
   .btnSubmit {
     background: #0499a0;
@@ -5944,6 +5986,7 @@
   table td {
     border: #ddd 1px solid;
     word-break: break-all;
+    vertical-align: top;
   }
   table td a {
     word-break: break-all;
@@ -5952,7 +5995,6 @@
     background-color: #f3f3f3;
     color: #333;
     border: #ddd 1px solid;
-    text-align: center;
     white-space: nowrap;
   }
   table.tableHover tr:hover {
@@ -6160,6 +6202,9 @@
     height: 100%;
     background: url(../images/basic/icon_ar.svg) no-repeat center;
     cursor: pointer;
+  }
+  .tableTypeB table th {
+    font-weight: normal;
   }
   .lp table td a {
     text-decoration: none;
@@ -7106,29 +7151,40 @@
     margin-bottom: 0.5em;
   }
   .accordion ul li .accordionList {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     border: none;
     border-radius: 0;
-    display: block;
     text-align: left;
-    background-color: #21baff;
+    background-color: #ececec;
     color: #fff;
     text-decoration: none;
     padding: 5px 50px 5px 20px;
     position: relative;
   }
+  .accordion ul li .accordionList h3,
+  .accordion ul li .accordionList h4 {
+    margin: 0.5em 0;
+    color: #333;
+  }
   .accordion ul li.active .accordionArrow {
     top: calc(50% - 2px);
     transform: rotate(225deg);
+  }
+  .accordion ul li.active .accordionContent {
+    display: block;
   }
   .accordion .accordionContent {
     line-height: 1.45em;
     transition: height 0.3s linear;
     overflow: hidden;
     display: none;
+    padding: 1em;
   }
   .accordion .accordionContent .content {
-    padding: 10px;
+    white-space: nowrap;
   }
   .accordion .accordionState {
     margin-left: 10px;
@@ -7142,7 +7198,7 @@
   }
   .accordion .accordionArrow:after {
     content: "";
-    border: 2px solid #fff;
+    border: 2px solid #333;
     border-top: none;
     border-left: none;
     display: block;
@@ -8413,42 +8469,6 @@
       display: none;
     }
   }
-  .calendar .dateSelect {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.125em;
-    position: relative;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  .calendar .dateSelect span {
-    display: inline-block;
-    margin-right: 5px;
-  }
-  .calendar .dateSelect .prev,
-  .calendar .dateSelect .next {
-    font-size: 0;
-    width: 40px;
-    height: 40px;
-    border: none;
-    opacity: 0.7;
-    position: absolute;
-  }
-  .calendar .dateSelect .prev:hover,
-  .calendar .dateSelect .next:hover {
-    opacity: 1;
-  }
-  .calendar .dateSelect .prev {
-    background: url(../images/icon/icon_arrow_left_dark.svg) center no-repeat;
-    background-size: 1rem;
-    left: 0;
-  }
-  .calendar .dateSelect .next {
-    background: url(../images/icon/icon_arrow_right_dark.svg) center no-repeat;
-    background-size: 1rem;
-    right: 0;
-  }
   .calendar table {
     width: 320px;
   }
@@ -8517,6 +8537,42 @@
   }
   .calendar .remark .today::before {
     background-color: #038187;
+  }
+  .dateSelect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.125em;
+    position: relative;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  .dateSelect span {
+    display: inline-block;
+    margin-right: 5px;
+  }
+  .dateSelect .prev,
+  .dateSelect .next {
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    border: none;
+    opacity: 0.7;
+    position: absolute;
+  }
+  .dateSelect .prev:hover,
+  .dateSelect .next:hover {
+    opacity: 1;
+  }
+  .dateSelect .prev {
+    background: url(../images/icon/icon_arrow_left_dark.svg) center no-repeat;
+    background-size: 1rem;
+    left: 0;
+  }
+  .dateSelect .next {
+    background: url(../images/icon/icon_arrow_right_dark.svg) center no-repeat;
+    background-size: 1rem;
+    right: 0;
   }
   .activityInfo {
     position: relative;
@@ -8794,7 +8850,6 @@
   .cp .pic {
     float: left;
     margin: 0px 1em 1em 0;
-    width: auto;
     width: 45%;
     max-width: 400px;
     background: #f1f1f1;
@@ -8819,6 +8874,29 @@
       width: auto;
       margin: 0px auto;
       display: block;
+      margin-bottom: 0.5em;
+    }
+  }
+  .cp .picfull {
+    margin: 0px 1em 1em 0;
+    width: auto;
+    max-width: 100%;
+    background: #f1f1f1;
+    overflow: hidden;
+    padding: 0.5em 0.5em 0.2em;
+  }
+  .cp .picfull img {
+    width: 100%;
+    margin: 0;
+    display: block;
+  }
+  .cp .picfull span {
+    text-align: center;
+    display: block;
+    font-size: 0.938em;
+  }
+  @media screen and (max-width: 767px) {
+    .cp .picfull {
       margin-bottom: 0.5em;
     }
   }
@@ -9009,6 +9087,15 @@
   .fileDownload li span.file_odt a:hover, .fileDownload li span.file_odt a:focus-visible {
     color: #fff;
   }
+  .fileDownload li span.file_odf a {
+    color: #fff;
+    font-weight: bold;
+    padding: 0.2em 0.8em;
+    border-radius: 3px;
+  }
+  .fileDownload li span.file_odf a:hover, .fileDownload li span.file_odf a:focus-visible {
+    color: #fff;
+  }
   .fileDownload li span.file_xls a {
     color: #fff;
     font-weight: bold;
@@ -9157,10 +9244,10 @@
     display: flex;
     align-items: center;
   }
-  .fileDownload li span.file_doc a, .fileDownload li span.file_docx a, .fileDownload li span.file_odt a {
+  .fileDownload li span.file_doc a, .fileDownload li span.file_docx a, .fileDownload li span.file_odt a, .fileDownload li span.file_odf a {
     background: #275cb7;
   }
-  .fileDownload li span.file_doc a:hover, .fileDownload li span.file_doc a:focus-visible, .fileDownload li span.file_docx a:hover, .fileDownload li span.file_docx a:focus-visible, .fileDownload li span.file_odt a:hover, .fileDownload li span.file_odt a:focus-visible {
+  .fileDownload li span.file_doc a:hover, .fileDownload li span.file_doc a:focus-visible, .fileDownload li span.file_docx a:hover, .fileDownload li span.file_docx a:focus-visible, .fileDownload li span.file_odt a:hover, .fileDownload li span.file_odt a:focus-visible, .fileDownload li span.file_odf a:hover, .fileDownload li span.file_odf a:focus-visible {
     background: #2351a2;
   }
   .fileDownload li span.file_xls a, .fileDownload li span.file_xlsx a, .fileDownload li span.file_csv a, .fileDownload li span.file_ods a {
@@ -9331,6 +9418,167 @@
     margin: 0 0.5em;
     display: inline-block;
     color: #d30000;
+  }
+  .calendarTB {
+    margin: 0 0 20px;
+  }
+  .calendarTB table {
+    word-break: break-all;
+    table-layout: fixed;
+  }
+  .calendarTB table thead {
+    margin-bottom: 5px;
+  }
+  .calendarTB table tbody {
+    border-top: 1px solid #ccc;
+  }
+  .calendarTB table tr {
+    background-color: #fff;
+  }
+  .calendarTB table tr:hover {
+    background-color: #fffbec;
+    transition: 0.2s;
+  }
+  .calendarTB table th {
+    background-color: #ddd !important;
+    border: 1px solid #f8f3e4;
+    border-bottom: 5px solid #f8f3e4;
+    color: #333;
+    padding: 0.5em 1em;
+    width: 14.28%;
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-align: center;
+  }
+  .calendarTB table th.weekend {
+    background-color: #ffac2f !important;
+  }
+  .calendarTB table td {
+    position: relative;
+    border: 1px solid #e5e5e5;
+    padding: 2px;
+  }
+  @media screen and (max-width: 767px) {
+    .calendarTB table td {
+      min-height: 65px;
+      padding: 2px 7px 2px 17% !important;
+    }
+  }
+  .calendarTB table td:after {
+    content: "";
+    width: 1px;
+    height: 20px;
+    float: left;
+    background-color: #fff;
+    border: none;
+  }
+  @media screen and (max-width: 767px) {
+    .calendarTB table td:after {
+      float: none;
+      height: auto;
+      background-color: red;
+    }
+  }
+  .calendarTB table td:before {
+    position: absolute;
+    width: 15%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 5px;
+    background-color: #eee;
+    color: #333;
+    text-align: center;
+  }
+  .calendarTB table td.otherMonth .numDate {
+    color: #d5d5d5;
+  }
+  @media screen and (max-width: 767px) {
+    .calendarTB table td.otherMonth {
+      display: none;
+    }
+  }
+  .calendarTB table .numDate {
+    text-align: center;
+    color: #7a7a7a;
+    font-size: 1.125rem;
+    font-weight: bolder;
+    width: 100%;
+    border-bottom: 1px dotted #ccc;
+  }
+  @media screen and (max-width: 767px) {
+    .calendarTB table .numDate {
+      position: absolute;
+      text-align: center;
+      right: 0;
+      left: 0;
+      top: 30px;
+      width: 15%;
+    }
+  }
+  .calendarTB .periodContent {
+    margin: 5px 0 0;
+    text-align: center;
+  }
+  .calendarTB .periodContent .applyPeriod {
+    background: #e3f384;
+    padding: 0.5em;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+  }
+  .calendarTB .periodContent .applyPeriod.disabled {
+    background-color: #ececec;
+  }
+  .calendarTB .periodContent .applyPeriod span {
+    display: block;
+  }
+  .calendarTB .periodContent .applyPeriod .time {
+    border-bottom: 1px dotted #fff;
+  }
+  .calendarTB .periodContent .applyPeriod .quota {
+    font-size: 0.9375rem;
+    color: #555;
+  }
+  .calendarTB .periodContent .applyPeriod .quota em {
+    font-style: normal;
+    padding: 0 3px;
+    color: #d30000;
+    font-weight: bold;
+  }
+  .calendarTB .periodContent .applyPeriod .btnGrp {
+    padding: 0;
+    margin-top: 5px;
+    justify-content: center;
+  }
+  .calendarTB .periodContent .applyPeriod .btn {
+    padding: 0.25em;
+    font-size: 0.9375rem;
+  }
+  .serviceApply {
+    background: #fff url(../images/paperbg01.png);
+    padding: 1em 2em;
+    margin-bottom: 1em;
+  }
+  .serviceApply .dateSelect {
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+  }
+  .serviceApply .dateSelect .prev,
+  .serviceApply .dateSelect .next {
+    position: relative;
+  }
+  .serviceApply .dateSelect .dateRange {
+    margin: 0 10px;
+  }
+  .serviceApply .dateSelect .dateRange + .dateRange::before {
+    content: "-";
+    display: inline-block;
+    margin-right: 20px;
+  }
+  .serviceApply .dateSelect .dateRange span {
+    color: #d30000;
+    font-family: "Century Gothic";
   }
 }
 .colorA a:hover {
