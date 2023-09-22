@@ -4215,7 +4215,7 @@
     font-size: 0.875em;
     border-radius: 0 0 40px 40px;
     padding: 1em;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 5px 5px -5px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   }
   .mainMenu ul li ul li a {
     padding: 0.6em 1.2em;
@@ -9569,6 +9569,10 @@
       padding: 1em 15px;
     }
   }
+  .serviceApply .title {
+    text-align: center;
+    font-size: 2em;
+  }
   .serviceApply .dateSelect {
     font-size: 1.5rem;
     margin-bottom: 1em;
@@ -9617,6 +9621,167 @@
   .applyModal {
     width: 800px;
     max-width: 98%;
+  }
+  .organization ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .organization ul li {
+    position: relative;
+    padding-top: 30px;
+  }
+  .organization ul li:before, .organization ul li:after {
+    box-sizing: border-box;
+  }
+  .organization ul li.inner {
+    margin-top: -30px;
+  }
+  .organization ul a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+    min-height: 60px;
+    background-color: #ececec;
+    margin: 0 5px 30px;
+    text-align: center;
+    border-radius: 4px;
+    color: #333;
+    transition: 0.3s;
+  }
+  .organization ul a:hover {
+    filter: brightness(95%);
+  }
+  .organization .administration > li > a,
+  .organization .director > li > a {
+    width: 30%;
+    margin: 0 auto 30px;
+    background-color: #81c0c3;
+  }
+  .organization .administration > li > a {
+    position: relative;
+  }
+  .organization .administration > li > a:before {
+    content: "";
+    position: absolute;
+    left: calc(50% - 1px);
+    top: 100%;
+    width: 2px;
+    height: 30px;
+    background-color: #a7a7a7;
+  }
+  .organization .director > li {
+    margin-top: -30px;
+  }
+  .organization .director > li > a {
+    position: relative;
+  }
+  .organization .director > li > a:before {
+    content: "";
+    position: absolute;
+    left: calc(50% - 1px);
+    top: 100%;
+    width: 2px;
+    height: 30px;
+    background-color: #a7a7a7;
+  }
+  .organization .subdirector {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .organization .subdirector:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(50% - 1px);
+    width: 2px;
+    height: 100%;
+    background-color: #a7a7a7;
+  }
+  .organization .subdirector > li {
+    flex-shrink: 1;
+    flex-basis: calc(25% - 15px);
+  }
+  .organization .subdirector > li:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 30px;
+    border-top: 2px solid #a7a7a7;
+  }
+  .organization .subdirector > li:nth-of-type(4n + 1):before {
+    width: calc(150% + 30px);
+    left: 50%;
+    border-left: 2px dotted #a7a7a7;
+  }
+  .organization .subdirector > li:nth-of-type(4n + 2) {
+    margin-right: 30px;
+  }
+  .organization .subdirector > li:nth-of-type(4n + 2):before {
+    left: 50%;
+    width: calc(50% + 30px);
+    border-left: 2px dotted #a7a7a7;
+  }
+  .organization .subdirector > li:nth-of-type(4n + 3) {
+    margin-left: 30px;
+  }
+  .organization .subdirector > li:nth-of-type(4n + 3):before {
+    right: 50%;
+    width: calc(50% + 30px);
+    border-right: 2px dotted #a7a7a7;
+  }
+  .organization .subdirector > li:nth-of-type(4n):before {
+    width: 100%;
+    right: 50%;
+    border-right: 2px dotted #a7a7a7;
+  }
+  .organization .subdirector > li a {
+    background-color: #ffbd59;
+  }
+  .organization .subdirector > li .inner {
+    width: 100%;
+  }
+  .organization .subdirector > li .inner:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(50% - 1px);
+    width: 1px;
+    height: 30px;
+    border-left: 2px dotted #a7a7a7;
+  }
+  .organization .department {
+    clear: both;
+    position: relative;
+  }
+  .organization .department:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 90%;
+    height: 2px;
+    background-color: #a7a7a7;
+  }
+  .organization .department > li {
+    flex: 1 1 10%;
+  }
+  .organization .department > li:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 30px;
+    width: calc(50% + 5px);
+    border-left: 2px solid #a7a7a7;
+  }
+  .organization .department li.mission:before {
+    background-color: transparent;
+    border-left: 2px dotted #a7a7a7;
   }
 }
 .colorA a:hover {

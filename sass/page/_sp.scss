@@ -160,6 +160,10 @@
   @include screen('mobile') {
     padding: 1em 15px;
   }
+  .title {
+    text-align: center;
+    font-size: 2em;
+  }
   .dateSelect {
     font-size: 1.5rem;
     margin-bottom: 1em;
@@ -213,4 +217,192 @@
 .applyModal {
   width: 800px;
   max-width: 98%;
+}
+
+//============== 組織圖 ================
+.organization {
+  ul {
+    @include liReset;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    li {
+      position: relative;
+      padding-top: 30px;
+      &:before,
+      &:after {
+        box-sizing: border-box;
+      }
+      &.inner {
+        margin-top: -30px;
+      }
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5em;
+      min-height: 60px;
+      background-color: $colorLightGray;
+      margin: 0 5px 30px;
+      text-align: center;
+      border-radius: 4px;
+      color: $colorWord;
+      transition: 0.3s;
+      &:hover {
+        filter: brightness(95%);
+      }
+    }
+  }
+  .administration,
+  .director {
+    > li {
+      > a {
+        width: 30%;
+        margin: 0 auto 30px;
+        background-color: mix($colorPrimary, #fff, 50%);
+      }
+    }
+  }
+
+  .administration {
+    > li {
+      > a {
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          left: calc(50% - 1px);
+          top: 100%;
+          width: 2px;
+          height: 30px;
+          background-color: $colorLine;
+        }
+      }
+    }
+  }
+
+  //主任秘書
+  .director {
+    > li {
+      margin-top: -30px;
+      > a {
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          left: calc(50% - 1px);
+          top: 100%;
+          width: 2px;
+          height: 30px;
+          background-color: $colorLine;
+        }
+      }
+    }
+  }
+
+  //諮詢會層級
+  .subdirector {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: calc(50% - 1px);
+      width: 2px;
+      height: 100%;
+      background-color: $colorLine;
+    }
+    > li {
+      flex-shrink: 1;
+      flex-basis: calc(25% - 15px);
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        height: 30px;
+        border-top: 2px solid $colorLine;
+      }
+      &:nth-of-type(4n + 1) {
+        &:before {
+          width: calc(150% + 30px);
+          left: 50%;
+          border-left: 2px dotted $colorLine;
+        }
+      }
+      &:nth-of-type(4n + 2) {
+        margin-right: 30px;
+        &:before {
+          left: 50%;
+          width: calc(50% + 30px);
+          border-left: 2px dotted $colorLine;
+        }
+      }
+      &:nth-of-type(4n + 3) {
+        margin-left: 30px;
+        &:before {
+          right: 50%;
+          width: calc(50% + 30px);
+          border-right: 2px dotted $colorLine;
+        }
+      }
+      &:nth-of-type(4n) {
+        &:before {
+          width: 100%;
+          right: 50%;
+          border-right: 2px dotted $colorLine;
+        }
+      }
+      a {
+        background-color: mix($colorLight, #fff, 80%);
+      }
+      .inner {
+        width: 100%;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: calc(50% - 1px);
+          width: 1px;
+          height: 30px;
+          border-left: 2px dotted $colorLine;
+        }
+      }
+    }
+  }
+
+  .department {
+    clear: both;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 5%;
+      width: 90%;
+      height: 2px;
+      background-color: $colorLine;
+    }
+    > li {
+      flex: 1 1 10%;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 30px;
+        width: calc(50% + 5px);
+        border-left: 2px solid $colorLine;
+      }
+    }
+    li {
+      &.mission {
+        &:before {
+          background-color: transparent;
+          border-left: 2px dotted $colorLine;
+        }
+      }
+    }
+  }
 }
