@@ -8,7 +8,7 @@ $colorSecondary: #e3f384; //輔色
 $colorLight: #ffac2f; //點綴
 //$colorLink: #00a4f9; //連結
 $colorImportant: #eb0202; //重要
-$colorLine: #a7a7a7;
+
 // 但注意真實顏色與語意的關聯必須易於辨識
 $colorBlue: #0066cc;
 $colorGreen: #298729;
@@ -22,6 +22,7 @@ $colorDark: #333333;
 $colorHr: #666; //hr顏色
 $colorWord: #333; //一般字的顏色
 $btnWordColor: #222; //按鈕字的顏色
+$colorLine: mix($colorPrimary, #fff, 45%);
 // 連結顏色
 $aColor: $colorPrimary;
 $aHover: mix($aColor, #000, 80%);

@@ -220,7 +220,11 @@
 }
 
 //============== 組織圖 ================
+
+$lineWidth: 3px;
+
 .organization {
+  font-size: 1rem;
   ul {
     @include liReset;
     display: flex;
@@ -241,7 +245,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 0.5em;
+      padding: 0.5em 0.3em;
       min-height: 60px;
       background-color: $colorLightGray;
       margin: 0 5px 30px;
@@ -260,7 +264,7 @@
       > a {
         width: 30%;
         margin: 0 auto 30px;
-        background-color: mix($colorPrimary, #fff, 50%);
+        background-color: mix($colorPrimary, #fff, 55%);
       }
     }
   }
@@ -274,7 +278,7 @@
           position: absolute;
           left: calc(50% - 1px);
           top: 100%;
-          width: 2px;
+          width: $lineWidth;
           height: 30px;
           background-color: $colorLine;
         }
@@ -293,7 +297,7 @@
           position: absolute;
           left: calc(50% - 1px);
           top: 100%;
-          width: 2px;
+          width: 3px;
           height: 30px;
           background-color: $colorLine;
         }
@@ -310,7 +314,7 @@
       position: absolute;
       top: 0;
       left: calc(50% - 1px);
-      width: 2px;
+      width: 3px;
       height: 100%;
       background-color: $colorLine;
     }
@@ -322,13 +326,13 @@
         position: absolute;
         top: 0;
         height: 30px;
-        border-top: 2px solid $colorLine;
+        border-top: 3px solid $colorLine;
       }
       &:nth-of-type(4n + 1) {
         &:before {
           width: calc(150% + 30px);
           left: 50%;
-          border-left: 2px dotted $colorLine;
+          border-left: 3px dotted $colorLine;
         }
       }
       &:nth-of-type(4n + 2) {
@@ -336,7 +340,7 @@
         &:before {
           left: 50%;
           width: calc(50% + 30px);
-          border-left: 2px dotted $colorLine;
+          border-left: 3px dotted $colorLine;
         }
       }
       &:nth-of-type(4n + 3) {
@@ -344,14 +348,14 @@
         &:before {
           right: 50%;
           width: calc(50% + 30px);
-          border-right: 2px dotted $colorLine;
+          border-right: 3px dotted $colorLine;
         }
       }
       &:nth-of-type(4n) {
         &:before {
           width: 100%;
           right: 50%;
-          border-right: 2px dotted $colorLine;
+          border-right: 3px dotted $colorLine;
         }
       }
       a {
@@ -366,7 +370,7 @@
           left: calc(50% - 1px);
           width: 1px;
           height: 30px;
-          border-left: 2px dotted $colorLine;
+          border-left: 3px dotted $colorLine;
         }
       }
     }
@@ -381,7 +385,7 @@
       top: 0;
       left: 5%;
       width: 90%;
-      height: 2px;
+      height: 3px;
       background-color: $colorLine;
     }
     > li {
@@ -393,15 +397,64 @@
         left: 50%;
         height: 30px;
         width: calc(50% + 5px);
-        border-left: 2px solid $colorLine;
+        border-left: 3px solid $colorLine;
+      }
+      &:last-of-type {
+        &:before {
+          right: 50%;
+          left: auto;
+          transform: scaleX(-1);
+        }
+      }
+      &:first-of-type,
+      &:last-of-type {
+        &:before {
+          border-top: $lineWidth solid $colorLine;
+        }
+      }
+      > a {
+        background-color: mix($colorBlue, #fff, 55%);
       }
     }
     li {
       &.mission {
         &:before {
           background-color: transparent;
-          border-left: 2px dotted $colorLine;
+          border-left: 3px dotted $colorLine;
         }
+        a {
+          background-color: mix($colorBlue, #fff, 30%);
+        }
+      }
+    }
+  }
+  .section {
+    flex-direction: column;
+    > li {
+      padding: 0 0 0 25px;
+      position: relative;
+      margin-bottom: 10px;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: calc(-50% - 10px);
+        width: 15px;
+        height: calc(100% + 10px);
+        border-left: $lineWidth solid $colorLine;
+        border-bottom: $lineWidth dotted $colorLine;
+      }
+      &:first-of-type {
+        &:before {
+          height: calc(50% + 30px);
+          top: -30px;
+        }
+      }
+      > a {
+        min-height: 76px;
+        margin-bottom: 0;
+        background-color: mix($colorBlue, #fff, 30%);
+        font-size: 0.938em;
       }
     }
   }
